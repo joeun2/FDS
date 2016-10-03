@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML Table Design</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <table>
+    <caption class="readable-hidden">현대카드 7행 5열로 구성된 표 입니다</caption>
+    <tr>
+      <th scope="row" class="title-01">티켓오픈</th>
+      <td colspan="4" class="border-delete">
+        <ul>
+          <li>2016년 9월 6일(화) 오후 12시 현대카드 선예매</li>
+          <li>2016년 9월 7일(수) 오후 12시 일반 예매</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" rowspan="4" class="title-01">티켓 가격</th>
+      <th class="title-02">구분</th>
+      <th class="title-02">스텐딩석<br />지정석 R</th>
+      <th class="title-02">지정석 S</th>
+      <th class="title-02 border-delete">지정석 A</th>
+    </tr>
+    <tr>
+      <th class="title-02">티켓가격</th>
+      <td>132,000원</td>
+      <td>110,000원</td>
+      <td class="border-delete">88,000원</td>
+    </tr>
+    <tr>
+      <th class="title-02">현대카드 할인(20%)</th>
+      <td>105,600원</td>
+      <td>88,000원</td>
+      <td class="border-delete">70,400원</td>
+    </tr>
+    <tr>
+      <td colspan="4" class="border-delete">
+        <ul>
+          <li>현대카드 결제 시 20% 할인(1인 4매 한정, 현대카드 Gift카드로 티켓 구매 불가)</li>
+          <li>현대카드 Star·Gold Friendship 30% 할인(인터파크 홈페이지를 통한 결제 시에 한함)</li>
+          <li>현대카드 M포인트 100% 결제 가능(현장 구매 및 전화 예매 시에는 불가)</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th class="title-01">M포인트 사용 안내</th>
+      <td colspan="4" class="border-delete">
+        <ul>
+          <li>5,000 M포인트 이상 사용 가능하며 M포인트 부족 시 잔여 M포인트만큼 사용 가능(10 M포인트 단위)</li>
+          <li>M포인트 사용 및 취소 내역은 결제 완료 5일 이내에 현대카드 홈페이지에서 확인 가능</li>
+          <li>법인·체크·선불·Gift카드, 하이브리드카드 제외</li>
+          <li>현대카드로 결제 또는 M포인트 사용 시 카드 승인 및 M포인트 사용 내역은 각각 문자메시지로 전송</li>
+          <li>정상금액 결제 후 할인금액으로 청구되며, 청구 할인 내역은 지정된 결제일에 확인 가능</li>
+          <li>예매 당일 취소가 아닌 경우 M포인트 사용 취소에 3일까지 소요될 수 있음</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th class="title-01">예매처</th>
+      <td colspan="4" class="border-delete">
+        인터파크 홈페이지(<a href="http://ticket.interpark.com" target="_blank" title="interpark로 이동">ticket.interpark.com</a>) 또는 고객센터(1544-1555)
+      </td>
+    </tr>
+
+  </table>
+</body>
+</html>

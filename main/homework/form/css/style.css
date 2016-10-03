@@ -1,0 +1,153 @@
+@charset "utf-8";
+/*re set*/
+div, h1, form, fieldset, label, input, a, p{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+ul{
+   list-style:none;
+}
+button{
+  border:0;
+  cursor: pointer;
+}
+button:hover{
+  opacity: 0.8;
+}
+body{
+  background-color: #ececec;
+  font-family: 'Varela Round';
+  color: #222;
+}
+.wrapper{
+  background-color: #fff;
+  width:360px;
+  margin: 0 auto;
+  padding-top: 40px;
+  box-sizing: border-box;
+  position: relative;
+}
+h1{
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+/*=======================================================
+form
+=======================================================*/
+.form{
+  margin:0 60px;
+}
+.form fieldset{
+  position: relative;
+  border:0;
+}
+.form{
+  background-color: #fff;
+  position: relative;
+}
+legend{
+  position: absolute;
+  left:-9999em;
+}
+label{
+  margin-bottom: 7px;
+  display: block;
+  font-size: 12px;
+}
+input{
+  border:0;
+  width:240px;
+  height:30px;
+  border-radius: 25px;
+  background-color: #f6f6f6;
+  margin-bottom: 20px;
+}
+.create-account{
+  width: 160px;
+  height: 30px;
+  color:#fff;
+  background-color: #1f4ba5;
+  border-radius: 25px;
+  text-align: center;
+  margin:0 41px 27px 41px;
+}
+/*=======================================================
+form
+=======================================================*/
+
+/*=======================================================
+social
+=======================================================*/
+.social{
+  margin:0 60px 30px 60px;
+}
+.social .connetct{
+  text-align: center;
+  font-family: 'PT Serif';
+  font-size: 12px;
+  color: #868686;
+  margin-bottom: 20px;
+
+}
+.social .facebook{
+  float: left;
+  border: 3px solid #215b9a;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 25px;
+  width:115px;
+  height:30px;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 10px;
+}
+.social .twitter{
+  border: 3px solid #00adf2;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 25px;
+  width:115px;
+  height:30px;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+}
+/*=======================================================
+social
+=======================================================*/
+
+/*=======================================================
+login
+=======================================================*/
+.login{
+  border-top: 1px solid #ececec;
+  padding: 18px 0;
+}
+.login p{
+  text-align: center;
+  font-size: 12px;
+  color: #1f4ba5;
+}
+.login img{
+  padding-right: 12px;
+}
+.login p:hover{
+  color:#999;
+}
+/*=======================================================
+login
+=======================================================*/
+
+/*close*/
+.wrapper .close{
+  position: absolute;
+  top:16px;
+  right:16px;
+  background-color: #fff;
+}
