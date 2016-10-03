@@ -1,0 +1,300 @@
+@charset "utf-8";
+@import url(fonts.css);
+/*reset*/
+html,body,div,header,nav,section,aside,button,article,footer,figure,figcaption,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,fieldset{
+  margin:0;
+  padding:0;
+}
+ul{ list-style-type:none; }
+img{ border:0;}
+body{
+  font-family: 'Varela Round';
+  }
+a{ text-decoration: none; }
+.wrapper{
+  width: 960px;
+  margin:0 auto;
+}
+
+/*============================================================
+header
+============================================================*/
+header{
+  padding: 80px 120px 45px 120px;
+}
+.info{
+  background-color: skyblue;
+  margin-bottom: 27px;
+}
+.info .fashion{
+  font-family: 'Oswald';
+  margin-right: 17px;
+  color: #1f4ba5;
+}
+.info .days{
+  font-family: 'PT Serif';
+  color: #b8b8b8;
+}
+.info .fashion, .days{
+  float:left;
+}
+.info .by{
+  float:right;
+  font-family: 'PT Serif';
+  color: #868686;
+}
+.info .by span{ font-family: 'Oswald'; }
+
+h1::before{
+  content: "";
+  display: block;
+  clear:both;
+}
+h1{
+  margin-bottom: 49px;
+  line-height:130%;
+  font-size: 3rem;
+  color: #222;
+  font-weight: normal;
+}
+header p{
+  font-family: 'PT Serif';
+  font-size: 1.5rem;
+  color: #868686;
+  line-height: 150%;
+}
+.description{
+  position: relative;
+}
+.description a{
+  position: absolute;
+  top:10px;
+  left:-32px;
+}
+ .text-01{
+  color: #868686;
+  line-height: 170%;
+}
+/*============================================================
+header
+============================================================*/
+
+/*============================================================
+main-content-01
+============================================================*/
+/*bigphoto*/
+.big-photo p{
+  margin:30px 120px;
+}
+.big-photo .blue-ocean{
+  margin-bottom: 51px;
+  color: #b8b8b8;
+  font-family: 'PT Serif';
+  font-size: 0.8rem;
+}
+.big-photo .text-ocean{
+  margin-bottom: 60px;
+}
+/*carousel*/
+.carousel .slider{
+  margin-bottom: 40px;
+}
+.carousel .slider::after{
+  content: "";
+  clear: both;
+  display: block;
+}
+.carousel .slider li{
+  float:left;
+}
+.carousel .slider li a{
+  text-align: center;
+  color: #b8b8b8;
+  font-family: 'PT Serif';
+  font-size: 0.8rem;
+}
+.carousel .slider li a:hover{
+  color: #1f4ba5;
+  opacity: 0.8;
+}
+.carousel .slider li a:focus{
+  color: #1f4ba5;
+  opacity: 0.8;
+}
+.controller{
+  padding: 0 120px 50px 120px;
+  position: relative;
+}
+.carousel .slider li p{
+  padding-top: 19px;
+}
+.controller button{
+  width:60px;
+  height: 60px;
+  border:1px solid #ececec;
+  background-color: #fff;
+}
+.controller .num{
+  color: #868686;
+  font-size: 0.5rem;
+  position: absolute;
+  top:22px;
+  left: 280px;
+}
+.controller .num span{
+  font-size: 1rem;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left:-12px;
+}
+
+/*============================================================
+main-content-01
+============================================================*/
+
+/*============================================================
+main-content-02
+============================================================*/
+.content-02{
+
+  padding: 0 120px 46px 120px;
+}
+.quote{
+  position: relative;
+  margin-bottom: 50px;
+}
+.quote .icon-quote{
+  position: absolute;
+  top:0;
+  left:-29px;
+}
+h2{
+  line-height:130%;
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 48px;
+}
+.content-02 .con-02-text-01{
+  margin-bottom: 78px;
+}
+.content-02 .con-02-text-02{
+  font-family: 'PT Serif';
+  color: #222;
+  line-height: 170%;
+  font-size: 1.2rem;
+}
+.komol{
+  position: absolute;
+  top:0;
+  right:85px;
+
+}
+.komol .from{
+  color: #b8b8b8;
+  font-family: 'PT Serif';
+  font-size: 0.8rem;
+}
+/*============================================================
+main-content-02
+============================================================*/
+
+/*============================================================
+main-content-03
+============================================================*/
+.content-03{
+  padding: 0 240px 60px 120px;
+
+}
+.video{
+  margin-bottom: 47px;
+}
+.video p{
+  text-align: center;
+  padding-top: 20px;
+  color: #b8b8b8;
+  font-family: 'PT Serif';
+  font-size: 0.8rem;
+}
+.row{
+  overflow: hidden;
+}
+h3{
+  line-height: 130%;
+  padding-bottom: 25px;
+}
+.row .col-01{
+  float:left;
+
+}
+.row .col-02{
+  float:right;
+}
+
+/*============================================================
+main-content-03
+============================================================*/
+
+/*============================================================
+sns
+============================================================*/
+.sns{
+  padding: 0 120px 43px 120px;
+}
+.sns .sns-icon{
+
+}
+.sns .sns-icon li a{
+  border-radius: 15px;
+  width:85px;
+  height:30px;
+  display: inline-block;
+  text-align: center;
+  line-height:30px;
+  color:#fff;
+  font-size: 0.8rem;
+  font-family: 'Oswald';
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.sns .sns-icon li img{
+  box-sizing: border-box;
+  padding-right: 10px;
+  padding-left:10px;
+  padding-top:7px;
+}
+.sns .sns-icon li{
+  float: left;
+  margin-right:10px;
+}
+.sns-icon .facebook a {
+  background-color: #215b9a;
+}
+.sns-icon .twitter a {
+  background-color: #00adf2;
+}
+.sns-icon .google a {
+  background-color: #ce4435;
+}
+.sns-icon .pinterest a {
+  background-color: #e51616;
+}
+.sns .sns-icon::after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/*back*/
+.back{
+  padding: 0 120px;
+  margin-bottom: 100px;
+
+}
+.back p a{
+  color: #1f4ba5;
+  font-size: 0.8rem;
+}
+.back p a img{
+  padding-right:10px;
+}
