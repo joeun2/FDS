@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cdcdcd;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="svg-icon-ruby.svg" class="cls-1" d="M128,847a0.981,0.981,0,0,1-.224.6l0.013,0.01-7,9-0.013-.01a0.959,0.959,0,0,1-1.553,0l-0.012.01-7-9,0.012-.01A0.98,0.98,0,0,1,112,847a1,1,0,0,1,.293-0.707h0l3-3h0A1,1,0,0,1,116,843h8a1,1,0,0,1,.707.293h0l3,3h0A1,1,0,0,1,128,847Zm-4.414-2h-7.172l-2.083,2.083L120,854.37l5.669-7.288Z" transform="translate(-112 -843)"/>
+</svg>

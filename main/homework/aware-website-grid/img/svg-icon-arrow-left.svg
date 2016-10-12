@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4d4d4d;
+        fill-rule: evenodd;
+        opacity: 0.3;
+      }
+    </style>
+  </defs>
+  <path id="svg-icon-arrow-left.svg" class="cls-1" d="M46,336a16,16,0,1,0-16-16A16,16,0,0,0,46,336Zm0-29a13,13,0,1,1-13,13A13.015,13.015,0,0,1,46,307Zm1.486,19.605,0,0a1.495,1.495,0,1,0,2.021-2.2l0,0L44.72,320l4.794-4.395,0,0a1.495,1.495,0,1,0-2.021-2.2l0,0-6,5.5a1.5,1.5,0,0,0,0,2.211Z" transform="translate(-30 -304)"/>
+</svg>

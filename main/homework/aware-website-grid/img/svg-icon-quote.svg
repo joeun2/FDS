@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1f4ba5;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="svg-icon-quote.svg" class="cls-1" d="M247,1621v2a2,2,0,0,1-2,2h-2a2,2,0,0,1-2-2v-4h0a5,5,0,0,1,5-5,1,1,0,0,1,0,2h0a3,3,0,0,0-3,3h2A2,2,0,0,1,247,1621Zm-7,0v2a2,2,0,0,1-2,2h-2a2,2,0,0,1-2-2v-4h0a5,5,0,0,1,5-5,1,1,0,0,1,0,2h0a3,3,0,0,0-3,3h2A2,2,0,0,1,240,1621Z" transform="translate(-234 -1614)"/>
+</svg>

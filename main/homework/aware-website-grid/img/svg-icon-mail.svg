@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="14" viewBox="0 0 16 14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d5d5d5;
+        fill-rule: evenodd;
+        opacity: 0.3;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="315" y="2218" width="16" height="14" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="svg-icon-mail.svg" class="cls-1" d="M329,2232H317a2,2,0,0,1-2-2v-10a2,2,0,0,1,2-2h12a2,2,0,0,1,2,2v10A2,2,0,0,1,329,2232Zm-11-2h10a1,1,0,0,0,1-1v-7.62l-5.328,5.33a1.007,1.007,0,0,1-1.414,0L317,2221.4v7.6A1,1,0,0,0,318,2230Zm9.555-10h-9.126l4.536,4.59Z" transform="translate(-315 -2218)"/>
+</svg>

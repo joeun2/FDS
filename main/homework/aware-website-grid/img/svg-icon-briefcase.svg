@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cfcfcf;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="svg-icon-briefcase.svg" class="cls-1" d="M524,1576H512a2,2,0,0,1-2-2v-9a2,2,0,0,1,2-2h2v-1a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2v1h2a2,2,0,0,1,2,2v9A2,2,0,0,1,524,1576Zm-4.5-14h-3a0.5,0.5,0,0,0,0,1h3A0.5,0.5,0,0,0,519.5,1562Zm3.5,3H513a1,1,0,0,0,0,2h10A1,1,0,0,0,523,1565Zm1,5a1,1,0,0,0-1-1h-1v1a1,1,0,0,1-2,0v-1h-4v1a1,1,0,0,1-2,0v-1h-1a1,1,0,0,0-1,1v3a1,1,0,0,0,1,1h10a1,1,0,0,0,1-1v-3Z" transform="translate(-510 -1560)"/>
+</svg>

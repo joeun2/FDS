@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d5d5d5;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="svg-icon-news.svg" class="cls-1" d="M126,1337H114a2,2,0,0,1-2-2v-8a2,2,0,0,1,2-2h1v-2a2,2,0,0,1,2-2h9a2,2,0,0,1,2,2v12A2,2,0,0,1,126,1337Zm0-13a1,1,0,0,0-1-1h-7a1,1,0,0,0-1,1v9a1,1,0,0,1-2,0v-6h0a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h10a1,1,0,0,0,1-1v-10Zm-7,7h5v2h-5v-2Zm0-3h5v2h-5v-2Zm0-3h5v2h-5v-2Z" transform="translate(-112 -1321)"/>
+</svg>

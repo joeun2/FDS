@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #222;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="svg-icon-bag.svg" class="cls-1" d="M818,48H806a2,2,0,0,1-2-2l1-6a2.249,2.249,0,0,1,2-2h10a2,2,0,0,1,2,2l1,6A2,2,0,0,1,818,48Zm-0.988-8H806.988L806,46h11.99ZM815,42a1,1,0,0,1-1-1V36a2,2,0,1,0-4,0v5a1,1,0,1,1-2,0V36a4,4,0,1,1,8,0v5A1,1,0,0,1,815,42Z" transform="translate(-804 -32)"/>
+</svg>

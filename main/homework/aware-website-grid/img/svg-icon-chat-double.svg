@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cfcfcf;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="svg-icon-chat-double.svg" class="cls-1" d="M35,1567v0.01H32v4h2.027l0.519,2.01,2.38-2.01h0.828l0.439,1.97A1.24,1.24,0,0,1,38,1573H37.667L33,1576l-0.667-3H32a2,2,0,0,1-2-2v-4a2,2,0,0,1,2-2h3v2Zm9,1H43.667L39,1571l-0.667-3H38a2,2,0,0,1-2-2v-4a2,2,0,0,1,2-2h6a2,2,0,0,1,2,2v4A2,2,0,0,1,44,1568Zm0-5.99H38v4h2.027l0.519,2.01,2.38-2.01H44v-4Z" transform="translate(-30 -1560)"/>
+</svg>
