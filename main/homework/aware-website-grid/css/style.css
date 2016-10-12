@@ -609,6 +609,8 @@ h2{
 .brands{
   text-align: center;
   background-color: #fff;
+  border-top: 1px solid #ececec;
+  box-sizing: border-box;
 }
 .logos-style a{
   display: block;
@@ -737,18 +739,11 @@ address{
   width: 360px;
   height: 40px;
   color: #595959;
-  /*background-color: #393939;*/
   border-radius: 50px;
-  border-top:0;
-  border-bottom:0;
-  border-left:15px solid #393939;
-  border-right:15px solid #393939;
-  background:url('../img/svg-icon-mail.svg') left no-repeat,
-  url('../img/svg-icon-footer-arrow-right.svg') right no-repeat;
+  border:0;
+  background:url('../img/svg-icon-mail.svg') 15px 50% no-repeat,
+  url('../img/svg-icon-footer-arrow-right.svg') calc(100% - 15px) 50% no-repeat;
   background-color: #393939 ;
-
-
-
 }
 .sign-up-news{
   background-color: #222;
