@@ -47,10 +47,8 @@ a{
   background-size: 120px 1px;
 }
 
-/**
- * --------------------------------
- * 로우 / 클리어픽스 모듈
- * ----------------------------- */
+/*로우 / 클리어픽스 모듈*/
+
 .row::after,
 .clearfix::after {
   content: '';
@@ -58,15 +56,9 @@ a{
   clear: both;
 }
 
-/**
- * --------------------------------
- * 컬럼 모듈
- * ----------------------------- */
+/*컬럼모듈*/
 [class*="col-"] {
-  /* 수평 레이아웃 */
   float: left;
-  /* 거터 */
-
 }
 .col-1  { width: 120px;   }
 .col-2  { width: 240px;  }
@@ -320,6 +312,7 @@ h2{
 
 /*featured-------------------------------------------------*/
 .featured{
+  background-color: #fff;
   text-align: center;
 }
 /*featured-header*/
@@ -430,7 +423,7 @@ h2{
 /*blog-header*/
 .blog {
   text-align: center;
-
+  background-color: #fff;
 }
 .blog-header{
   padding: 41px 60px 44px 60px;
@@ -525,7 +518,7 @@ h2{
 /*testimonials,about---------------------------------------------*/
 .testimonials-about{
   text-align: center;
-
+  background-color: #fff;
 }
 .testimonials {
   position: relative;
