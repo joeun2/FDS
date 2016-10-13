@@ -728,7 +728,7 @@ address{
 /**/
 /**/
 .sign-up-news{
-  padding: 30px 0 21px 0;
+  padding: 24px 0 25px 0;
   border-left:1px solid #353535;
   border-right:1px solid #353535;
   box-sizing: border-box;
@@ -779,7 +779,7 @@ address{
   background-color: #222;
 }
 .payments{
-  padding: 20px 0 21px 0;
+  padding: 20px 0 19px 0;
 
 }
 .payments ul li{
