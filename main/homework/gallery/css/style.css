@@ -30,6 +30,7 @@ header h1{
     box-sizing: border-box;
   }
   .gallery-box{
+    transform: scale(1);
     display: inline-block;
   }
   .gallery-box::after{
@@ -50,6 +51,7 @@ header h1{
   }
 
   .gallery-box{
+    border-radius: 40px;
     overflow: hidden;
     position: relative;
     float: left;
@@ -107,6 +109,7 @@ header h1{
     box-sizing: border-box;
   }
   .gallery-box{
+    transform: scale(1);
     display: inline-block;
   }
   .gallery-box::after{
@@ -127,6 +130,7 @@ header h1{
   }
 
   .gallery-box{
+    border-radius: 50px;
     overflow: hidden;
     position: relative;
     float: left;
@@ -184,6 +188,7 @@ header h1{
     box-sizing: border-box;
   }
   .gallery-box{
+    transform: scale(1);
     display: inline-block;
   }
   .gallery-box::after{
@@ -204,6 +209,7 @@ header h1{
   }
 
   .gallery-box{
+    border-radius: 50px;
     overflow: hidden;
     position: relative;
     float: left;
@@ -216,21 +222,21 @@ header h1{
   /*text-style*/
   .gallery-title{
     position: absolute;
-    left:20px;
+    left:30px;
     bottom:-100px;
     /*보여지는 위치 50px*/
     color: #333;
-    font-size: 35px;
+    font-size: 45px;
     transition: all 0.5s;
   }
   .gallery-skill{
     position: absolute;
-    left:20px;
+    left:30px;
     bottom:-40px;
     /*보여지는 위치 20px*/
     color: #333;
     font-family: 'Rambla', sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     transition: all 0.5s;
   }
   .gallery-skill span{
@@ -242,11 +248,11 @@ header h1{
   /*Text 효과*/
   .gallery-box:hover .gallery-title{
     color: #fff;
-    bottom:50px;
+    bottom:70px;
   }
   .gallery-box:hover .gallery-skill{
     color: #fff;
-    bottom:20px;
+    bottom:35px;
   }
 
 }
