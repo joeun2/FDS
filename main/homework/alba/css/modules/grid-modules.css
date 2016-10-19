@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/*Grid-system*/
+.wrapper{
+  margin-left: auto;
+  margin-right: auto;
+}
+.wrapper.show-grid {
+  position: relative;
+}
+
+/*.show-grid::before{
+  content: "";
+  position: absolute;
+  z-index: 10000;
+  top:0;
+  left:0;
+  right:0;
+  height: 100vh;
+  background: linear-gradient(90deg, hsla(201, 60%, 72%, 0.6) 50%, hsla(201, 76%, 89%, 0.6) 50%);
+  background-size: 25% 1px;
+}*/
+@media only screen and (min-width:1080px) {
+
+}
