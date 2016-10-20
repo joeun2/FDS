@@ -82,7 +82,10 @@ a:focus{
     height:64px;
     color: #444;
   }
-
+  nav h3{
+    position: absolute;
+    top:-9999px;
+  }
   /**
    * ----------------------------------
    * Visual
