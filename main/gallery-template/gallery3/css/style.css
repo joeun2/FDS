@@ -34,7 +34,7 @@ header h1{
     position: relative;
     display: inline-block;
     /*background-color: purple;*/
-    margin:0 10px 10px 10px;
+    margin:10px 10px 10px 10px;
   }
   .gallery-box::after{
     content:"";
