@@ -29,7 +29,10 @@ a:focus{
   top:0;
   left:0;
 }
-
+nav h3{
+  position: absolute;
+  top:-9999px;
+}
 @media only screen and (min-width: 1080px) {
   /**
    * ----------------------------------
@@ -82,10 +85,7 @@ a:focus{
     height:64px;
     color: #444;
   }
-  nav h3{
-    position: absolute;
-    top:-9999px;
-  }
+
   /**
    * ----------------------------------
    * Visual
