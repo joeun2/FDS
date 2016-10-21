@@ -18,31 +18,31 @@ CSS 뿐만 아니라 *.scss, *.sass 파일을 @import 문을 사용하여 호출
 
 - 파일명 작성시 띄어쓰기 X
 - sass파일은 "" 필요 X
-- main.sass 파일 해석 시 병합(Marge, Combine)되어 하나의 main.css로 css 폴더 내부에 생성된다
+- main.sass 파일 해석 시 병합(Marge, Combine)되어 하나의 main.css로 css 폴더 내부에 생성된다.
 
 >예)sass/modules/grid.scss -> css/modules/grid.css
 
-- 아래와 같은 방식은 불러 올 모듈이 많다면 권장하지 않음.
+- 아래와 같은 방식은 불러올 모듈이 많다면 권장하지 않음.
 ~~~sass
 @import "modules/normalize", "modules/grid"
 ~~~
 
-- 모듈이 많다면 아래와 같이 개별 적으로 로드 하는 것이 좋음.
+- 모듈이 많다면 아래와 같이 개별적으로 로드 하는 것이 좋음.
 ~~~sass
 @import config/vars
 @import config/mixins
 ~~~
 ###1.1.1_호출제어(Partials)
-*.scss, *.sass 파일 중 CSS 파일로 변경되지 않게 하는 방법은 파일 명 앞에 _을 붙여주면 됩니다.
+*.scss, *.sass 파일 중 CSS 파일로 변경되지 않게 하는 방법은 파일명 앞에 _를 붙여주면 됩니다.
 
 - 재사용 가능한 모듈 파일 이름 앞에 _ 를 붙이지 않으면 css 폴더에 해당 파일이 생성된다.
 
-###1.1.2 sass @import 불러올때 
-sass, scss파일 안에서 아무쪽에서나 불러올수는 있지만<br /> CSS는 불가능하기 때문에 오류가 날수있다 
-상단에서 불어오는것이 좋다 
+###1.1.2 sass @import 불러올 때 
+sass, scss파일 내, 어디서나 불러올 수 있지만<br /> CSS는 불가능하기 때문에 오류가 날 수 있다.
+상단에서 불러오는것이 좋다.
 
 ###1.1.3 스타일 모듈관리(Manage Style Modules) 
-SASS에서는 각각의 역할을 분리하여 필요에 따라 재사용할 수 있도록 모듈 관리하는 것이 가능합니다.
+SASS에서는 각각의 역할을 분리하여 필요에 따라 재사용할 수 있도록 모듈을 관리하는 것이 가능합니다.
 
 ~~~sass
 @import modules/normalize
@@ -55,7 +55,7 @@ SASS에서는 각각의 역할을 분리하여 필요에 따라 재사용할 수
 ~~~
 
 #####1.1.3.1 적절한 파일 관리 방법
-- 모든파일 공통 파일
+- 모든 파일 공통 파일
 - 부분적 파일
 - sass불가능한 사람들을 위한 파 
 
@@ -82,10 +82,10 @@ footer .buttom{
 
 ---
 ##1.2 변수(Variables,$)
-PHP 변수처럼 $ 이름 값을 설정한 후, 값을 참조하여 적용할 수 있습니다.
+PHP 변수처럼 $이름 값을 설정한 후, 값을 참조하여 적용할 수 있습니다.
 
-- 대쉬(-), 언더스코어(_) 동일하게 처리
-- 변수를 따로 모아서 새파일로 관리하여 가져오는 것이 효율적이다.
+- 대쉬(-), 언더스코어(_) 동일하게 처리.
+- 변수를 따로 모아서 새 파일로 관리하여 가져오는 것이 효율적이다.
 
 변수 선언
 
@@ -148,14 +148,16 @@ background: red;
 ~~~
 
 ####1.2.2 변수 기본 값 설정($, !default) 
-변수를 설정한 후, 초기 값을 지정할 수 있습니다
+변수를 설정한 후, 초기 값을 지정할 수 있습니다.
 
 ~~~sass
 $set-width: 940px; 
 // 우선 적용
 $set-width: 1000px !default;
-// 기본값이기 때문에 별도로 값이 설정되지 않을 경우 사용됩니다
+// 기본값이기 때문에 별도로 값이 설정되지 않을 경우 사용됩니다.
 ~~~
+
+---
 ###1.3 데이터 유형 (Data Type)
 - Null : 비어있는 값	
 - Number(숫자형) : 1.2, 3, 14px	
@@ -169,6 +171,7 @@ $set-width: 1000px !default;
 
 sass Type-of($type) = 함수
 
+---
 ###1.4 연산 (Operations)
  덧셈(+), 뺄셈(-), 곱셈(*), 나눗셈(/), 나머지(%) 등 수학의 연산 결과를 수행할 수 있습니다.
 
@@ -200,7 +203,7 @@ small != big // true
 ~~~
 
 ####1.4.2 문자연산 (String Operations)
-문자와 문자를 접합하려는 경우 + 연산자를 사용할 수 있습니다
+문자와 문자를 접합하려는 경우 + 연산자를 사용할 수 있습니다.
 
 ~~~sass
 li {
@@ -210,7 +213,7 @@ cursor: n + -resize; // n-resize
 ~~~
 
 ####1.4.3 보간법(#{ }, Interpolation)
-SASS는 변수를 “ ” 내부에서 처리할 수 있는 보간 법을 지원합니다
+SASS는 변수를 “ ” 내부에서 처리할 수 있는 보간법을 지원합니다.
 
 ~~~sass
 $family: "Droid+Sans";
@@ -222,8 +225,7 @@ $family: "Droid+Sans";
 //웹 폰트 CDN 사용시 보간법이 유용하게 활용
 ~~~
 
-HTMl에서 | 사용시 오류가 생기기때문에
-%로 바꿔줘야함
+HTMl에서 | 사용시 오류가 생기기 때문에 %로 바꿔줘야 함.
 
 ~~~html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre|7COpen+Sans%7CRoboto">
@@ -255,26 +257,25 @@ color: #010203 * 2;
 ~~~
 
 ####1.4.6 기타 연산(Etc. Operations) 
-불린 데이터 연산을 사용할 수 있습니다
+불린 데이터 연산을 사용할 수 있습니다.
 
 	불린(Boolean) 연산 지원: and, or, not
 리스트(List) 연산 미지원.
-<br />배열 객체의 length, join 등 유사 함수 지원
+<br />배열 객체의 length, join 등 유사 함수 지원.
 
 - lenght($list) : 리스트의 길이를 돌려줍니다.
-- nth() :리스트에서 순서에 해당한것을 빼오다 
-- join ($list1, $list2, [$separator])
--합치다
-- append($list1, $val) : 리스트 뒤에 집어넣는것(push랑 비슷)
+- nth() : 리스트에서 순서에 해당한것을 빼오다.
+- join ($list1, $list2, [$separator]) : 합치다.
+- append($list1, $val) : 리스트 뒤에 집어넣는 것 (push와 비슷)
 
-
+---
 ###1.5믹스인 (@mixin)
-코드를 섞는다
+코드를 섞는다.
  
-JS 함수와 흡사한 믹스인은 @mixin으로 모듈을 정의한 후,@include로 호출할 수 있어 재 사용이 가능합니다
+JS 함수와 흡사한 믹스인은 @mixin으로 모듈을 정의한 후, @include로 호출할 수 있어 재사용이 가능합니다.
 
-- @mixin : 믹스인을 정의
-- @include : 믹스인 호출
+- @mixin : 믹스인을 정의.
+- @include : 믹스인을 호출.
 
 ~~~sass
  @mixin box-sizing {
@@ -287,7 +288,8 @@ JS 함수와 흡사한 믹스인은 @mixin으로 모듈을 정의한 후,@includ
 	 @include box-sizing; }
 ~~~
 
-reset mixin 만들기
+reset mixin 만들기.
+
 ~~~sass
 @mixin reset-list {
   margin: {
@@ -338,9 +340,9 @@ video" !default;
 
 
 ###1.5.1 전달 인자 (Arguments) 
-@mixin으로 정의된 모듈에 인자를 전달하여 믹스인을 확장할 수 있다
+@mixin으로 정의된 모듈에 인자를 전달하여 믹스인을 확장할 수 있다.
 
-($변수) 믹스인 내부에 전달된 값을 받기에 전달인자라고 부른다
+($변수) 믹스인 내부에 전달된 값을 받기에 전달 인자라고 부른다.
 ~~~sass
 @mixin border-radius($변수) {
     -webkit-border-radius: $변수;
@@ -364,6 +366,7 @@ video" !default;
 }
 ~~~
 
+---
 ###1.6 가운데 정렬 박스 모듈
 ~~~sass
 .center-box
