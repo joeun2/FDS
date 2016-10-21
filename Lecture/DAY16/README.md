@@ -6,7 +6,7 @@
 ### 1.1 호출 import (@import)
 CSS 뿐만 아니라 *.scss, *.sass 파일을 @import 문을 사용하여 호출 할 수 있습니다.
 
-- scss, sass 확장자의 경우는 생략할 수 있  습니다.(css 확장자는 필히 명시)
+- scss, sass 확장자의 경우는 생략할 수 있습니다.(css 확장자는 필히 명시)
 
 ~~~sass
 @import "team-works.scss"; @import "team-works";
@@ -38,8 +38,8 @@ CSS 뿐만 아니라 *.scss, *.sass 파일을 @import 문을 사용하여 호출
 - 재사용 가능한 모듈 파일 이름 앞에 _ 를 붙이지 않으면 css 폴더에 해당 파일이 생성된다.
 
 ###1.1.2 sass @import 불러올 때 
-sass, scss파일 내, 어디서나 불러올 수 있지만<br /> CSS는 불가능하기 때문에 오류가 날 수 있다.
-상단에서 불러오는것이 좋다.
+sass, scss파일 내, 어디서나 불러올 수 있지만<br /> CSS는 불가능하기 때문에 오류가 날 수 있다.<br />
+상단에서 불러오는 것이 좋다.
 
 ###1.1.3 스타일 모듈관리(Manage Style Modules) 
 SASS에서는 각각의 역할을 분리하여 필요에 따라 재사용할 수 있도록 모듈을 관리하는 것이 가능합니다.
@@ -55,12 +55,13 @@ SASS에서는 각각의 역할을 분리하여 필요에 따라 재사용할 수
 ~~~
 
 #####1.1.3.1 적절한 파일 관리 방법
-- 모든 파일 공통 파일
-- 부분적 파일
-- sass불가능한 사람들을 위한 파 
+- 모든 파일 공통 파일.
+- 부분적 파일.
+- sass에 대해 미숙한 사람들을 위한 별도의 파일 생성.
 
 ###1.1.4 중첩 @import
-선언구문 내부에 사용 별도로 분리된 파일에서 코드를 불러와 선택자 뒤에 불러온 모듈 선택자가 추가 됩니다.(선택자 상속)
+선언구문 내부에 사용.<br />
+별도로 분리된 파일에서 코드를 불러와 선택자 뒤에 불러온 모듈 선택자가 추가 됩니다.(선택자 상속)
 
 ~~~sass
 .button {
@@ -116,9 +117,7 @@ $break-large: 1200px;
 float: left;
 width: 250px;
 
-@media screen and (max-width: $break-
-
-small) { //320px 값이 적용
+@media screen and (max-width: $break-small) { //320px 값이 적용
     width: 100px;
     float: none;
  }
@@ -183,7 +182,7 @@ $page-max-width: 1420px;
 // 컨테이너 클래스 설정
 .container {
  max-width: $page-max-width - $global-
- //변수 치환후 연산 과정이 연산 과정이 이루어집니다.
+ //변수 치환 후 연산 과정이 연산 과정이 이루어집니다.
  padding * 2;
  padding: 0 $global-padding;
 }
@@ -225,7 +224,7 @@ $family: "Droid+Sans";
 //웹 폰트 CDN 사용시 보간법이 유용하게 활용
 ~~~
 
-HTMl에서 | 사용시 오류가 생기기 때문에 %로 바꿔줘야 함.
+HTML에서 | 사용시 오류가 생기기 때문에 %로 바꿔줘야 함.
 
 ~~~html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre|7COpen+Sans%7CRoboto">
@@ -263,13 +262,13 @@ color: #010203 * 2;
 리스트(List) 연산 미지원.
 <br />배열 객체의 length, join 등 유사 함수 지원.
 
-- lenght($list) : 리스트의 길이를 돌려줍니다.
-- nth() : 리스트에서 순서에 해당한것을 빼오다.
-- join ($list1, $list2, [$separator]) : 합치다.
-- append($list1, $val) : 리스트 뒤에 집어넣는 것 (push와 비슷)
+- lenght($list) : 리스트의 길이를 돌려준다.
+- nth() : 리스트에서 순서에 해당한것을 가져온다.
+- join ($list1, $list2, [$separator]) : 합친다.
+- append($list1, $val) : 리스트 뒤에 집어넣는다. (push와 비슷)
 
 ---
-###1.5믹스인 (@mixin)
+###1.5 믹스인 (@mixin)
 코드를 섞는다.
  
 JS 함수와 흡사한 믹스인은 @mixin으로 모듈을 정의한 후, @include로 호출할 수 있어 재사용이 가능합니다.
