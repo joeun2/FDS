@@ -168,7 +168,7 @@ $set-width: 1000px !default;
 - Map : 키:값 으로 구성된 그룹
 	   $map: (key1: value1, key2: value2) 
 
-sass Type-of($type) = 함수
+sass Type-of($type) = 데이터 유형을 알려주는 함수
 
 ---
 ###1.4 연산 (Operations)
@@ -368,7 +368,7 @@ video" !default;
 ---
 ###1.6 가운데 정렬 박스 모듈
 ~~~sass
-.center-box
+.center-box {
   @include box-sizing(content-box)
   position: absolute
   top: 0
@@ -378,4 +378,5 @@ video" !default;
   margin:
     left: $box-width / -2
     top: $box-height / -2
+}
 ~~~
