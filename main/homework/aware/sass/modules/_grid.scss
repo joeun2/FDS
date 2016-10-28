@@ -1,0 +1,109 @@
+/**
+ *  페이지 폭: 1920px
+ *  컬럼 개수: 16
+ *  컬럼 폭: 120px
+ */
+.warrper{
+  width: 1920px;
+}
+/**
+ * --------------------------------
+ * grid-container 모듈
+ * ----------------------------- */
+.grid-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+/**
+ * --------------------------------
+ * grid 모듈
+ * ----------------------------- */
+.grid {
+  width: 1920px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  // box-lines:
+}
+.grid-sub{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  align-content: flex-content;
+}
+
+/* 수평 정렬 모듈 */
+.grid-left    { justify-content: flex-start;    }
+.grid-center  { justify-content: center;        }
+.grid-right   { justify-content: flex-end;      }
+.grid-between { justify-content: space-between; }
+.grid-around  { justify-content: space-around;  }
+
+/* 수직 정렬 모듈 */
+.grid-top     { align-items: flex-start; }
+.grid-middle  { align-items: center;     }
+.grid-bottom  { align-items: flex-end;   }
+.grid-stretch { align-items: stretch;    }
+
+.grid-reverse { flex-direction: row-reverse; }
+
+/* 정가운데 정렬 모듈 */
+.grid-center-middle,
+.grid-cm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/**
+ * --------------------------------
+ * cell 모듈
+ * ----------------------------- */
+.cell {
+  box-sizing: border-box;
+  flex: 1;
+}
+
+/* cell 크기 개별 적용 모듈 */
+// .cell-d-1-16  { flex: 0 0 6.25%; }
+// .cell-d-2-16  { flex: 0 0 12.5%; }
+// .cell-d-3-16  { flex: 0 0 18.75%; }
+// .cell-d-4-16  { flex: 0 0 25%; }
+// .cell-d-5-16  { flex: 0 0 31.25%; }
+// .cell-d-6-16  { flex: 0 0 37.5%; }
+// .cell-d-7-16  { flex: 0 0 43.75%; }
+// .cell-d-8-16  { flex: 0 0 50%; }
+// .cell-d-9-16  { flex: 0 0 56.25%; }
+// .cell-d-10-16 { flex: 0 0 62.5%; }
+// .cell-d-11-16 { flex: 0 0 68.75%; }
+// .cell-d-12-16 { flex: 0 0 75%; }
+// .cell-d-13-16 { flex: 0 0 81.25%; }
+// .cell-d-14-16 { flex: 0 0 87.5%; }
+// .cell-d-15-16 { flex: 0 0 93.75%; }
+// .cell-d-16-16 { flex: 0 0 100%; }
+.cell-d-0-5-16{ flex: 0 0 60px; }
+.cell-d-1-16  { flex: 0 0 120px; }
+.cell-d-2-16  { flex: 0 0 240px; }
+.cell-d-3-16  { flex: 0 0 360px; }
+.cell-d-4-16  { flex: 0 0 480px; }
+.cell-d-5-16  { flex: 0 0 600px; }
+.cell-d-6-16  { flex: 0 0 720px; }
+.cell-d-7-16  { flex: 0 0 840px; }
+.cell-d-8-16  { flex: 0 0 960px; }
+.cell-d-9-16  { flex: 0 0 1080px; }
+.cell-d-10-16 { flex: 0 0 1200px; }
+.cell-d-11-16 { flex: 0 0 1320px; }
+.cell-d-12-16 { flex: 0 0 1440px; }
+.cell-d-13-16 { flex: 0 0 1560px; }
+.cell-d-14-16 { flex: 0 0 1680px; }
+.cell-d-15-16 { flex: 0 0 1800px; }
+.cell-d-16-16 { flex: 0 0 1920px; }
+
+/* cell 개별 정렬 모듈 */
+.cell-top      { align-self: flex-start; }
+.cell-center   { align-self: center;     }
+.cell-bottom   { align-self: flex-end;   }
+.cell-baseline { align-self: baseline;   }
+.cell-stretch  { align-self: stretch;    }

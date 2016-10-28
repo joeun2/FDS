@@ -1,0 +1,416 @@
+@import "modules/normalize.scss"
+@import "modules/reset.scss"
+@import "modules/grid.scss"
+@import "partials/header.sass"
+@import "partials/footer.sass"
+@import "config/mixins.sass"
+@import "config/vars.sass"
+
+body
+  font-family: 'Varela Round'
+
+  .header
+    height: 80px
+
+  .container-1
+    height: 480px
+    .slider
+      position: relative
+      img
+        @include positiona
+      .s-product
+        position: relative
+        color: #1f4ba5
+        @include fontStyleOswald_1
+    .banners-1
+      .banners-box
+        height: 240px
+        position: relative
+        a
+          position: absolute
+          display: block
+          width: 240px
+          height: 240px
+          transition: 0.4s all
+          img
+            @include positiona
+          p
+            position: relative
+            z-index: 10
+            text-align: center
+        a:hover
+          opacity: 0.5
+      .banners-box
+        .b-box-01
+            .banners-product
+              @include fontStyleOswald_1
+              margin-top: 35px
+              color: #1f4ba5
+            .banners-text
+              @include fontStyleVarela_3
+              margin-top: 115px
+              color: #222
+
+      .b-box-02
+        .banners-text
+          @include fontStyleOswald_2
+          color: #fff
+          line-height: 30px
+          letter-spacing: 1px
+          margin-top: 60px
+      .b-box-03
+        .banners-product
+          @include fontStyleOswald_1
+          margin-top: 143px
+          color: #1f4ba5
+        .banners-text
+          @include fontStyleVarela_3
+          margin-top: 9px
+          color: #222
+      .b-box-04
+        a
+          width: 720px
+          .banners-product
+            @include fontStyleOswald_1
+            margin-top: 60px
+            color: #1f4ba5
+          .banners-text
+            font-size: 24px
+            margin-top: 9px
+            color: #222
+          .banners-text-sub
+            @include fontStyleVarela_2
+            color: #868686
+      .b-box-05
+        a
+          text-align: center
+          display: block
+          position: relative
+          transition: 0.4s all
+          padding-top: 50px
+          box-sizing: border-box
+          img
+            @include positiona
+          p
+            position: relative
+            z-index: 10
+          .banners-product
+            @include fontStyleOswald_1
+            color: #1f4ba5
+            margin-bottom: 325px
+          .banners-text
+            @include fontStyleVarela_3
+            color: #222
+        a:hover
+          opacity: 0.5
+
+
+
+
+
+
+  .container-2
+    text-align: center
+    height: 360px
+    div
+      border-left: 1px solid #ececec
+      box-sizing: border-box
+      position: relative
+    .m-loved-header
+      padding: 43px 50px 0 50px
+      box-sizing: border-box
+      h2
+        @include fontStyleOswald_2
+        margin: 20px 0
+      .m-text
+        @include fontStyleVarela_2
+        color: #868686
+        margin-bottom: 20px
+      button
+        border: 1px solid #ececec
+        background-color: #fff
+        width: 60px
+        height: 60px
+      .m-days
+        margin-top: 15px
+        color: #868686
+        font-size: 10px
+        span
+          font-size: 14px
+    .m-loved
+      transition: all 0.4s
+      padding: 20px 0
+      a
+        .m-title
+          @include fontStyleVarela_1
+          color: #222
+          height: 46px
+        .m-price
+          @include fontStyleOswald_1
+          color: #222
+          margin-top: 3px
+        .tag
+          position: absolute
+          bottom: 27px
+          left: 30px
+        .sale
+          color: #ff3f2b
+        span
+          font-size: 8px
+          color: #a1a1a1
+          font-family: 'Oswald'
+          position: absolute
+          bottom: 29px
+          right: 30px
+    .m-loved:hover
+      opacity: 0.5
+
+
+  .container-3
+    text-align: center
+    height: 120px
+    .banners-ev-1
+      position: relative
+      transition: all 0.4s
+      a
+        .year
+          line-height: 120px
+          font-family: 'Oswald'
+          font-size: 14px
+          font-weight: bold
+          color: #fff
+          position: absolute
+          top: 0
+          left: 40px
+        .b-text
+          line-height: 28px
+          font-size: 30px
+          color: #fff
+          position: absolute
+          top: 36px
+          left: 335px
+          span
+            font-size: 14px
+            opacity: 0.5
+        .b-sub-text
+          font-family: 'Oswald'
+          font-size: 14px
+          font-weight: bold
+          color: #fff
+          line-height: 120px
+          position: absolute
+          top: 0
+          right: 30px
+    .banners-ev-1:hover
+      opacity: 0.9
+    .banners-ev-2
+      position: relative
+      .banners-ev-2-text
+        position: absolute
+        top: 0
+        left: 0
+        .year
+          font-family: 'Oswald'
+          font-size: 14px
+          font-weight: bold
+          color: #222
+          line-height: 120px
+          position: absolute
+          top: 0
+          left: 30px
+        .b-text
+          font-size: 30px
+          color: #222
+          line-height: 120px
+          position: absolute
+          top: 0
+          left: 359px
+        button
+          width: 120px
+          height: 30px
+          background-color: #f4f5f7
+          border: 3px solid #1f4ba5
+          border-radius: 50px
+          font-size: 12px
+          color: #1f4ba5
+          transition: all 0.4s
+          margin-top: 45px
+          margin-left: 10px
+        .b-btn-01
+          margin-left: 670px
+        button:hover
+          background-color: #1f4ba5
+          color: #fff
+
+  .container-4
+    text-align: center
+    height: 480px
+    .blog
+      .blog-box-01
+        height: 240px
+        background-color: #fff
+        div
+          position: relative
+          transition: 0.4s all
+          a
+            border-left: $borderstyle
+            border-bottom: $borderstyle
+            padding-top: 55px
+            display: block
+            height: 240px
+            box-sizing: border-box
+          .b-days
+            @include fontStylePt_1
+          .b-title
+            margin: 10px 0
+            @include fontStyleVarela_4
+            color: #222
+          .b-by
+            font-size: 10px
+            color: #868686
+            font-family: 'Oswald'
+            font-weight: bold
+            span
+              @include fontStylePt_1
+              font-size: 10px
+          .b-hover-01:hover
+            background: url(../img/b-img-01.png) no-repeat
+            .b-title
+              color: #fff
+            .b-days, .b-by, span
+              color: #fff
+              opacity: 0.7
+          .b-hover-02:hover
+            background: url(../img/b-img-02.png) no-repeat
+          .b-hover-03:hover
+            background: url(../img/b-img-03.png) no-repeat
+            .b-title
+              color: #fff
+            .b-days, .b-by, span
+              color: #fff
+              opacity: 0.7
+
+        .blog-header
+          padding-top: 35px
+          border-bottom: $borderstyle
+          h2
+            margin: 20px 0
+            @include fontStyleOswald_2
+          .b-text
+            @include fontStyleVarela_2
+            color: #868686
+    .featured
+      .featured-box-01
+        height: 240px
+        div
+          position: relative
+          border-left: $borderstyle
+          border-bottom: $borderstyle
+          box-sizing: border-box
+          a
+            display: block
+            height: 240px
+            transition: 0.4s all
+            .f-title
+              margin-top: 25px
+              @include fontStyleVarela_1
+              color: #222
+              height: 46px
+            .f-price
+              @include fontStyleOswald_1
+              color: #222
+              margin-top: -12px
+            .tag
+              position: absolute
+              bottom: 27px
+              left: 30px
+            .sale
+              color: #ff3f2b
+            span
+              font-size: 8px
+              color: #a1a1a1
+              font-family: 'Oswald'
+              position: absolute
+              bottom: 29px
+              right: 30px
+          a:hover
+            opacity: 0.5
+        .featured-header
+          padding-top: 35px
+          h2
+            margin: 20px 0
+            @include fontStyleOswald_2
+          .f-text
+            @include fontStyleVarela_2
+            color: #868686
+
+
+
+
+  .container-5
+    text-align: center
+    height: 120px
+    .brand
+      div
+        border-left: $borderstyle
+        box-sizing: border-box
+        justify-content: center
+        line-height: 120px
+        img
+          vertical-align: middle
+      .brands-header
+        position: relative
+        .all-brands
+          @include fontStyleOswald_3
+          color: #1f4ba5
+          line-height: 24px
+          position: absolute
+          top: 36px
+          left: 36px
+        .num-274
+          @include fontStyleOswald_2
+          font-size: 60px
+          color: #000
+          opacity: 0.1
+          position: absolute
+          top: 45px
+          left: 14px
+    .subscribe
+      color: #fff
+      form
+        background-color: #1f4ba5
+        height: 120px
+        padding-top: 25px
+        box-sizing: border-box
+        position: relative
+        fieldset
+          margin-bottom: 15px
+          @include fontStyleOswald_3
+        .mail-text
+          background: #103480 url('../img/mail.png') no-repeat 15px center
+          border: 0
+          width: 360px
+          height: 30px
+          border-radius: 50px
+          @include fontStylePt_1
+          padding-left: 45px
+          box-sizing: border-box
+        .email-submit
+          width: 11px
+          height: 8px
+          border: 0
+          background: url('../img/upload.png') no-repeat
+          position: absolute
+          top: 72px
+          right: 193px
+    .social
+      a
+        display: block
+        height: 60px
+        border-left: $borderstyle
+        border-bottom: $borderstyle
+        box-sizing: border-box
+        line-height: 60px
+        transition: 0.4s all
+      a:hover
+        opacity: 0.5

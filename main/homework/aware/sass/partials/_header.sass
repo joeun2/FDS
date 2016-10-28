@@ -1,0 +1,131 @@
+.header
+  position: relative
+  .logo a
+    display: block
+    margin-left: 80px
+    width: 96px
+    height: 80px
+    margin-right: 59px
+    img
+      margin-top: 28px
+
+  .btn-menu
+    a img
+    position: absolute
+    top: 30px
+    left: 34px
+    .btn-menu-box-off
+      transition: all 0.3s
+      opacity: 0
+      box-sizing: border-box
+      width: 1920px
+      height: 240px
+      background-color: #222
+      color: #fff
+      position: absolute
+      top: 50px
+      left: -34px
+      padding: 34px
+      ul li a
+        color: #aeaeae
+    .btn-menu-box-on
+      transition: all 0.3s
+      transform: scaleY(1)
+      opacity: 1
+      box-sizing: border-box
+      width: 1920px
+      height: 240px
+      background-color: #222
+      color: #fff
+      position: absolute
+      top: 50px
+      left: -34px
+      padding: 34px
+      z-index: 20
+      ul li a
+        color: #aeaeae
+  .menu
+    position: absolute
+    top: 0
+    left: 235px
+    ul li
+      float: left
+      margin-right: 43px
+      a
+         font-size: 14px
+         color: #222
+         display: block
+         height: 80px
+         line-height: 80px
+      .right-btn::after
+        margin-left: 10px
+        content: ""
+        display: inline-block
+        width: 6px
+        height: 4px
+        background: url('../img/arrow.png') no-repeat
+  .search
+    position: absolute
+    top: 0
+    left:  960px
+    fieldset
+      text-indent: -9999px
+    .search-text
+      width: 600px
+      height: 30px
+      background-color: #f6f6f6
+      color: #868686
+      font-family: 'PT Serif'
+      font-style: italic
+      font-size: 12px
+      border: 0
+      border-radius: 50px
+      padding: 0 20px
+      box-sizing: border-box
+    .search-submit
+      width: 16px
+      height: 16px
+      border: 0
+      background: url('../img/search.png') no-repeat
+      position: absolute
+      top: 31px
+      right: 12px
+  .location
+    position: absolute
+    top: 32px
+    left: 1610px
+    img, p
+      float: left
+    p
+      font-style: 12px
+      color: #868686
+      margin-left: 10px
+      top: -2px
+      font-weight: normal
+  .buttons
+    position: absolute
+    top: 32px
+    left: 1780px
+    a, p
+      float: left
+    .btn-basket
+      position: relative
+    .btn-basket::after
+      position: absolute
+      top: -9px
+      left: 7px
+      content: "3"
+      display: block
+      width: 16px
+      height: 16px
+      border-radius: 50px
+      background-color: #1f4ba5
+      font-size: 9px
+      color: #fff
+      text-align: center
+    p
+      margin: 0 38px 0 15px
+      font-size: 12px
+      font-family: 'Oswald'
+      color: #222
+      font-weight: bold
