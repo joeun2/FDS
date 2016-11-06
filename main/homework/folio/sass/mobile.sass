@@ -1,0 +1,371 @@
+// modile first
+@media only screen and (max-width: 750px)
+
+  body
+    width: 100%
+    min-width: 480px
+
+  ///////////////////////////////////////////////////////////////////
+  //header///////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////
+  header
+    width: 100%
+    height: px2rem(800px)
+    position: relative
+  nav
+    width: 100%
+    height: px2rem(88px)
+    padding: px2rem(27px) px2rem(29px) px2rem(27px) px2rem(32px)
+    box-sizing: border-box
+    position: relative
+
+    h1
+      a
+        position: relative
+        z-index: 100
+        .cls-1
+          fill: #fff
+          transition: 0.3s all
+      a:hover .cls-1,
+      .logo-active .cls-1
+        fill: #000
+    h1 a span
+      display: inline-block
+      text-indent: -999px
+      position: relative
+    .menu-btn a
+      width: 30px
+      height: 23px
+      position: absolute
+      top: px2rem(33px)
+      right: px2rem(29px)
+      z-index: 100
+    // menu 버튼
+    .menu-btn a span
+      display: block
+      width: 30px
+      height: 2px
+      background: #fff
+      position: absolute
+      top: 0px
+      transition: 0.4s all
+    .menu-btn a .menu-btn-02
+      position: absolute
+      top: 7px
+    .menu-btn a .menu-btn-03
+      position: absolute
+      top: 14px
+    .menu-btn a .menu-btn-04
+      position: absolute
+      top: 21px
+    // menu 버튼
+    .menu-btn .menu-btn-active .menu-btn-01
+      background: #18191a
+      transform: translate(-14px,11px) rotate(90deg)
+    .menu-btn .menu-btn-active .menu-btn-02
+      background: #18191a
+      transform: translate(-7px,4px) rotate(90deg)
+    .menu-btn .menu-btn-active .menu-btn-03
+      background: #18191a
+      transform: translate(0px,-3px) rotate(90deg)
+    .menu-btn .menu-btn-active .menu-btn-04
+      background: #18191a
+      transform: translate(7px,-10px) rotate(90deg)
+
+  //gnb-on
+  .gnb
+    position: absolute
+    top: -694px
+    left: 0
+    opacity: 0.5
+    width: 100%
+    background: #fff
+    font-size: px2rem(28px)
+    text-align: center
+    padding-top: px2rem(120px)
+    box-sizing: border-box
+    transition: 1s all
+    z-index: 50
+    a
+      font-weight: 200
+      line-height: 36px
+      display: block
+      color: #18191a
+      transition: 0.3s all
+      margin-bottom: 70px
+    a:hover
+      color: #43f3d0
+  .gnb-active
+    opacity: 1
+    position: absolute
+    top: 0
+    left: 0
+    transition: 1s all
+  //visual
+  .visual
+    .visual-01
+      background: url('../img/slider-Pic-01.png') center no-repeat
+    .visual-02
+      margin-left: 100%
+      opacity: 1
+      background: url('../img/slider-Pic-02.jpg') center no-repeat
+      background-size: cover
+    .visual-03
+      margin-left: 200%
+      background: url('../img/slider-Pic-03.jpg') center no-repeat
+    .visual-style
+      padding: 30% px2rem(75px) px2rem(0px) px2rem(75px)
+      box-sizing: border-box
+      width: 100%
+      height: px2rem(800px)
+      transition: 1s all
+      @include position1
+
+      a
+        display: block
+        line-height: 80px
+        font-size: 350%
+        color: #fff
+      a::after
+        @include arrowBtn
+      a:hover::after
+        transform: translateX(30px) translateY(-8px)
+    .v-rolling
+      display: none
+  ///////////////////////////////////////////////////////////////////
+  //main////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////
+  main
+    background: #0b0b0b
+    position: relative
+    height: auto
+    .container
+      height: px2rem(1500px)
+      background-color: #333
+
+
+      .box-img-01
+        overflow: hidden
+        background: url('../img/pic-01.png') center no-repeat
+        order: -1
+        background-size: cover
+      .box-img-02
+        background: url('../img/pic-02.png') center no-repeat
+        order: 0
+        background-size: cover
+      .box-img-03
+        background:#222324 url('../img/pic-03.png') center no-repeat
+        order: -1
+        text-align: center
+        position: relative
+        background-size: cover
+
+        a
+          font-size: px2rem(36px)
+          display: block
+          color: #fff
+          line-height: px2rem(43px)
+          vertical-align: middle
+          height: 100%
+          padding-top: px2rem(110px)
+          box-sizing: border-box
+          opacity: 1
+          position: relative
+          z-index: 100
+          transition: 0.3s all
+          opacity: 0
+        a::after
+          @include arrowBtn
+          display: block
+          transform: translateX(-20px)
+          opacity: 0.2
+        a:hover
+          @include position1
+          background: #222324
+          opacity: 0.9
+          width: 100%
+          height: 100%
+        a:hover::after
+          transform: translateX(-4px)
+      .box-img-04
+        background: url('../img/pic-04.png') center no-repeat
+        order: -1
+        background-size: cover
+      .box-img-06
+        background: url('../img/pic-06.png') center no-repeat
+        order: 0
+        background-size: cover
+      .box-img-08
+        background: url('../img/pic-08.png') center no-repeat
+        order: 1
+        background-size: cover
+  ///////////////////////////////////////////////////////////////////
+  //new & twitter ////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////
+  .news
+    height: px2rem(350px)
+    width: px2rem(574px)
+    // 90%
+    margin: 0 auto
+    padding-top: px2rem(50px)
+    box-sizing: border-box
+    position: relative
+    border-bottom: 2px solid #55acee
+    h1
+      color: #fff
+      font-size: px2rem(22px)
+      margin-right: px2rem(170px)
+      width: 20%
+    ul
+      padding-top: px2rem(50px)
+      position: absolute
+      top: 0
+      left: 20%
+      width: 85%
+
+      li:nth-child(1)
+        margin-left: 6.5%
+      li:nth-child(2)
+        display: none
+      li
+        display: inline-block
+        width: 80%
+        position: relative
+        a
+          display: inline-block
+          color: #fff
+          font-size: px2rem(32px)
+          p:nth-child(2)
+            font-size: px2rem(20px)
+            opacity: 0.2
+            margin-top: px2rem(20px)
+
+
+
+  .twitter
+    height: px2rem(465px)
+    width: px2rem(574px)
+    margin: 0 auto
+    padding-top: px2rem(65px)
+    box-sizing: border-box
+    border-bottom: 1px solid #171717
+    position: relative
+    h1
+      color: #fff
+      font-size: px2rem(22px)
+      margin-right: px2rem(170px)
+      width: 20%
+    ul
+      padding-top: px2rem(65px)
+      position: absolute
+      top: 0
+      left: 20%
+      width: 70%
+      li:nth-child(3)
+        display: none
+      li:nth-child(4)
+        display: none
+      li
+        display: inline-block
+        width: px2rem(260px)
+        position: relative
+        margin-left: 2.3rem
+        margin-bottom: px2rem(20px)
+        a
+          width: px2rem(400px)
+          display: inline-block
+          color: #fff
+          font-size: px2rem(22px)
+          line-height: 30px
+          font-weight: 300
+          p
+            span
+              color: #55acee
+          p:nth-child(2)
+            font-size: px2rem(20px)
+            opacity: 0.2
+            margin-top: px2rem(10px)
+  ///////////////////////////////////////////////////////////////////
+  //footer ////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////
+  footer
+    background: #0b0b0b
+    height: px2rem(490px)
+    box-sizing: border-box
+    color: #fff
+    margin: 0 auto
+
+    .footer_con
+      width: px2rem(574px)
+      height: px2rem(490px)
+      margin: 0 auto
+      position: relative
+      h1
+        position: absolute
+        top: px2rem(80px)
+        left: px2rem(-70px)
+      div
+        display: inline-block
+        // margin-right: 123px
+        h2
+          position: absolute
+          top: 80px
+          font-size: px2rem(22px)
+          display: inline-block
+
+        div
+          width: px2rem(400px)
+          height: px2rem(80px)
+          position: relative
+          top: 80px
+          a
+            display: inline-block
+            font-size: 22px
+            color: #787878
+            transition: 0.3s all
+        .f-con1
+          position: relative
+          top: 80px
+          left: 152px
+          p
+            display: inline-block
+            margin-right: 43px
+          p:nth-child(1) a
+            margin-bottom: 21px
+          p:hover a
+            color: #43f3d0
+      .office
+        h2
+          position: absolute
+          top: 190px
+          left: 0px
+
+        .f-con2
+          position: relative
+          top: 105px
+          left: 152px
+          width: px2rem(400px)
+      .social
+        h2
+          position: absolute
+          top: 360px
+          left: 0
+
+        .f-con3
+          position: relative
+          top: 178px
+          left: 152px
+          width: 24rem
+          a
+            margin-bottom: 21px
+            margin-right: 50px
+          a:nth-child(4)
+            transform: translateX(18px)
+          a:nth-child(1):hover
+            color: #005cff
+          a:nth-child(2):hover
+            color: #e25087
+          a:nth-child(3):hover
+            color: #55acee
+          a:nth-child(4):hover
+            color: #305f84

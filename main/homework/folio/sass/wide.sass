@@ -1,0 +1,360 @@
+//wide
+@media only screen and (max-width: 1920px) and (min-width: 1025px)
+  body
+    background-color: #fff
+
+
+  ///////////////////////////////////////////////////////////////////
+  //header///////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////
+  header
+    width: 100%
+    // height: px2rem(980px)
+    position: relative
+  nav
+    width: 100%
+    height: px2rem(110px)
+    padding: px2rem(36px) px2rem(68px) px2rem(36px) px2rem(68px)
+    box-sizing: border-box
+    position: fixed
+    top: 0
+    z-index: 200
+    h1
+      a
+        position: relative
+        z-index: 100
+        .cls-1
+          fill: #fff
+          transition: 0.3s all
+      a:hover .cls-1,
+      .logo-active .cls-1,
+      .logo-active span,
+      a:hover span
+        fill: #000
+        color: #000
+    h1 a span
+      display: inline-block
+      color: #fff
+      position: relative
+      top: -10px
+      font-size: 18px
+      font-weight: bold
+      padding-left: 50px
+      transition: 0.3s all
+
+
+      // position: relative
+    // menu 버튼
+    .menu-btn
+      display: none
+
+  //gnb-on
+  .gnb
+    font-size: px2rem(18px)
+    text-align: center
+    box-sizing: border-box
+    transition: 1s all
+    position: absolute
+    top: px2rem(38px)
+    right: px2rem(110px)
+    z-index: 100
+    a
+      display: inline-block
+      font-weight: 300
+      line-height: 36px
+      color: #fff
+      transition: 0.3s all
+      margin-left: px2rem(60px)
+      height: 36px
+
+    a:hover
+      color: #43f3d0
+  .gnb-active a
+    color: #222324
+
+  .nav-active
+    background-color: #fff
+
+
+  //visual
+  .visual
+    height: px2rem(980px)
+    margin-top: px2rem(-88px)
+  .visual-01
+    background: url('../img/slider-Pic-01.png') center no-repeat
+    background-size: cover
+  .visual-02
+    margin-left: 100%
+    opacity: 1
+    background: url('../img/slider-Pic-02.jpg') center no-repeat
+    background-size: cover
+  .visual-03
+    margin-left: 200%
+    background: url('../img/slider-Pic-03.jpg') center no-repeat
+  .visual-style
+    height: px2rem(980px)
+    width: 100%
+    padding: px2rem(310px) px2rem(160px) px2rem(0px) px2rem(160px)
+    box-sizing: border-box
+    transition: 1s all
+
+    @include position1
+    a
+      display: block
+      line-height: 80px
+      font-size: px2rem(80px)
+      color: #fff
+    a::after
+      display: inline-block
+      content: url('../img/arrow.png')
+      transform: translateX(10px) translateY(-8px)
+      transition: 0.6s cubic-bezier(0.30, 0.5, 0.10, 2.0)
+    a:hover::after
+      transform: translateX(30px) translateY(-8px)
+  .v-rolling
+    position: absolute
+    top: px2rem(765px)
+    left: 0
+    z-index: 100
+    width: 100%
+    text-align: center
+    ul
+      width: 90%
+      overflow: hidden
+      margin: 0 auto
+      li
+        display: inline-block
+        text-align: left
+        width: 32%
+        a
+          width: 100%
+          border-top: 2px solid #fff
+          display: block
+          padding-top: px2rem(30px)
+          font-size: px2rem(16px)
+          font-weight: bold
+          color: #fff
+          transition: 0.3s all
+          span
+            display: block
+            font-size: px2rem(14px)
+            font-weight: 100
+        a:hover,
+        .v-list-active
+          border-top: 2px solid #43f3d0
+          color: #43f3d0
+
+  ///////////////////////////////////////////////////////////////////
+  //container////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////
+  main
+    background: #0b0b0b
+    position: relative
+    height: auto
+    .container
+      height: px2rem(1440px)
+      background-color: #333
+      .box-img-01
+        background: url('../img/pic-01.png') center no-repeat
+        order: -4
+        background-size: cover
+      .box-img-02
+        background: url('../img/pic-02.png') center no-repeat
+        order: -3
+        background-size: cover
+      .box-img-03
+        background:#222324 url('../img/pic-03.png') center no-repeat
+        order: -2
+        text-align: center
+        position: relative
+        background-size: cover
+
+        a
+          font-size: px2rem(36px)
+          display: block
+          color: #fff
+          line-height: px2rem(43px)
+          vertical-align: middle
+          height: 100%
+          padding-top: px2rem(110px)
+          box-sizing: border-box
+          opacity: 1
+          position: relative
+          z-index: 100
+          transition: 0.3s all
+          opacity: 0
+        a::after
+          @include arrowBtn
+          display: block
+          transform: translateX(-20px)
+          opacity: 0.2
+        a:hover
+          @include position1
+          background: #222324
+          opacity: 0.9
+          width: 100%
+          height: 100%
+        a:hover::after
+          transform: translateX(-4px)
+      .box-img-04
+        background: url('../img/pic-04.png') center no-repeat
+        order: -1
+        background-size: cover
+      .box-img-05
+        background: url('../img/pic-05.png') center no-repeat
+        order: -4
+        background-size: cover
+      .box-img-06
+        background: url('../img/pic-06.png') center no-repeat
+        order: -3
+        background-size: cover
+      .box-img-07
+        background: url('../img/pic-07.png') center no-repeat
+        order: -2
+        background-size: cover
+      .box-img-08
+        background: url('../img/pic-08.png') center no-repeat
+        order: 1
+        background-size: cover
+    ///////////////////////////////////////////////////////////////////
+    //new & twitter ////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////
+    .news
+      height: px2rem(275px)
+      width: px2rem(1600px)
+      // 90%
+      margin: 0 auto
+      padding-top: px2rem(65px)
+      box-sizing: border-box
+      position: relative
+      border-bottom: 2px solid #55acee
+      h1
+        color: #fff
+        font-size: px2rem(18px)
+        margin-right: px2rem(170px)
+        width: 15%
+      ul
+        padding-top: px2rem(65px)
+        position: absolute
+        top: 0
+        left: 15%
+        width: 85%
+
+        li:nth-child(1)
+          margin-right: 6.5%
+        li
+          display: inline-block
+          width: 46%
+          position: relative
+          a
+            display: inline-block
+            color: #fff
+            font-size: px2rem(26px)
+            p:nth-child(1)::after
+              @include arrowBtn
+              transform: translateX(90px) translateY(-9px)
+              opacity: 0.2
+            p:nth-child(2)
+              font-size: px2rem(14px)
+              opacity: 0.2
+              margin-top: px2rem(20px)
+            p:nth-child(1):hover::after
+              opacity: 1
+              transform: translateX(110px) translateY(-9px)
+
+
+    .twitter
+      height: px2rem(275px)
+      width: px2rem(1600px)
+      margin: 0 auto
+      padding-top: px2rem(65px)
+      box-sizing: border-box
+      border-bottom: 1px solid #171717
+      position: relative
+      h1
+        color: #fff
+        font-size: px2rem(18px)
+        margin-right: px2rem(170px)
+        width: 15%
+      ul
+        padding-top: px2rem(65px)
+        position: absolute
+        top: 0
+        left: 15%
+        width: 85%
+        li
+          display: inline-block
+          width: px2rem(430px)
+          position: relative
+          margin-right: 1.3rem
+          a
+            display: inline-block
+            color: #fff
+            font-size: px2rem(18px)
+            p
+              span
+                color: #55acee
+            p:nth-child(2)
+              font-size: px2rem(14px)
+              opacity: 0.2
+              margin-top: px2rem(20px)
+  ///////////////////////////////////////////////////////////////////
+  //footer ////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////
+  footer
+    background: #0b0b0b
+    height: px2rem(255px)
+    box-sizing: border-box
+    color: #fff
+    margin: 0 auto
+
+
+    .footer_con
+      width: px2rem(1600px)
+      height: px2rem(255px)
+      margin: 0 auto
+      position: relative
+      h1
+        position: absolute
+        top: px2rem(80px)
+        left: px2rem(-70px)
+      div
+        display: inline-block
+        // margin-right: 123px
+        h2
+          position: absolute
+          top: 80px
+          font-size: px2rem(18px)
+          display: inline-block
+
+        div
+          width: px2rem(240px)
+          height: px2rem(80px)
+          margin-left: 227px
+          margin-right: 64px
+          position: relative
+          top: 80px
+          a
+            display: inline-block
+            font-size: 18px
+            color: #787878
+            line-height: 23px
+            transition: 0.3s all
+        .f-con1
+          p:nth-child(1) a
+            margin-bottom: 21px
+          p:hover a
+            color: #43f3d0
+
+        .f-con3
+          a
+            margin-bottom: 21px
+            margin-right: 30px
+          a:nth-child(1):hover
+            color: #005cff
+          a:nth-child(2):hover
+            color: #e25087
+          a:nth-child(3):hover
+            color: #55acee
+          a:nth-child(4):hover
+            color: #305f84
