@@ -69,10 +69,9 @@ var boxes = document.querySelectorAll('.box');
 
 **CDN사용**
 
-	`js
 	<script src="http://code.jquery.com/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	`
+
 
 **로컬데이터를 사용하기 위한 조건문**
 
@@ -91,6 +90,72 @@ var boxes = document.querySelectorAll('.box');
 **- 방법 3**
 
 	!window.jQuery && document.write ('<script src="./lib/jquery/jquery.min.js"><\/script>');
+
+###1.1 DOM Script VS jQuery 
+
+~~~js
+///////////////////////////////
+// Case 0. Legacy DOM Script
+// var gnb = document.getElementById('gnb');
+// id 속성을 사용한 위(↑)의 경우 VS
+// class 속성을 사용한 아래(↓)의 경우
+var all_els = document.body.getElementsByTagName('*');
+var gnb_class= 'gnb';
+var check_gnb_class = new RegExp('(^|\\s+)'+gnb_class+'(\\s+|$)');
+for ( var i=0, l=all_els.length; i<l; i++ ) {
+  var el = all_els[i];
+  if ( check_gnb_class.test(gnb_class) ) {
+    var gnb = el;
+    break;
+  }
+}
+// --------------------------------------------------------------------------------
+var gnb_links = gnb.getElementsByTagName('a');
+var assignParentClassActive0 = function() {
+  var add_class_name = 'active';
+  var check_class_name = new RegExp('(^|\\s+)'+add_class_name+'(\\s+|$)');
+  var parent = this.parentNode;
+  var pre_class = parent.className;
+  if ( !check_class_name.test(pre_class) ) {
+    parent.className += ' ' + add_class_name;
+    parent.className = parent.className.replace(/^\s+/,'').replace(/\s+$/,'');
+  }
+  return false;
+};
+for ( var i=0, l=gnb_links.length; i<l; i++ ) {
+  var gnb_link = gnb_links.item(i);
+  gnb_link.onclick = assignParentClassActive0;
+}
+////////////////////////
+// Case 1. Modern DOM Script
+// var gnb = document.querySelector('.gnb');
+// var gnb_links = gnb.querySelectorAll('a');
+// var assignParentClassActive = function(event) {
+//   event.preventDefault();
+//   event.target.parentNode.classList.add('active');
+// };
+// [].forEach.call(gnb_links, function(link) {
+//   link.addEventListener('click', assignParentClassActive);
+// });
+////////////////////
+// Case 2. jQuery
+// var $gnb = jQuery('.gnb');
+// var $gnb_links = jQuery('a', $gnb);
+// var $gnb_links = jQuery('.gnb a'); // <-- IE 9+ 성능 이슈 없음
+// var assignParentClassActive = function(event) {
+//   event.preventDefault();
+//   jQuery(event.target).parent().addClass('active');
+// };
+// jQuery.each($gnb_links, function(idx, link) {
+//   jQuery(link).on('click', assignParentClassActive);
+// });
+//Case 2.2 jQuery
+$('.gnb a').click(function (event) {
+  e.preventDefault();
+  $(this).parent().addClass('active');
+});
+});//(this);
+~~~
 
 
 
