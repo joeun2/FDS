@@ -106,7 +106,15 @@ window.jQuery || document.write ('<script src="./lib/jquery/jquery.min.js"><\/sc
 ```js
 !window.jQuery && document.write ('<script src="./lib/jquery/jquery.min.js"><\/script>');
 ```
+**전달인자($) -> jQuery 확실한 명시 방법**
 
+- IIFE 패턴(즉시 실행 함수) 사용하지 않을 경우,  $ 기호는 자바스크립트 라이브러리들이 즐겨 사용하는 단축 변수명이기에 여러 라이브러리를 다중 사용할 경우 충돌이 발생할 수 있다. 전역에서 jQuery를 사용할 경우 여러분들은 충돌에 주의가 요구된다.
+
+```js
+(function (global, $) {
+})(this, this.jQuery);
+```
+     
 ###1.1 DOM Script VS jQuery 
 - ***DOM Script*** :  속도가 빠르다  
 
@@ -184,11 +192,10 @@ $('.gnb a').click(function (event) {
 ```
 
 **- jQuery 팩토리 함수** (자바스크립트의 팩토리 패턴을 사용하기에 붙여진 이름)
+
+
+     js
 ```js
-// IIFE 패턴(즉시 실행 함수) 사용하지 않을 경우,
-     // $ 기호는 자바스크립트 라이브러리들이 즐겨 사용하는 단축 변수명이기에
-     // 여러 라이브러리를 다중 사용할 경우 충돌이 발생할 수 있다.
-     // 전역에서 jQuery를 사용할 경우 여러분들은 충돌에 주의가 요구된다.
        // 1. 전달인자로 DOM ElementNode를 설정한 경우, jQuery( DOM ElementNode )
        var $html = jQuery( document.documentElement );
        console.log( $html, $html.jquery );
