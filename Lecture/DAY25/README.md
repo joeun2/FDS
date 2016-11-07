@@ -41,7 +41,7 @@ var boxes = document.querySelectorAll('.box');
 ```
 
 ## 2. jQuery
->손쉽고 간편한 JavaScript library
+>손쉽고 간편한 JavaScript Library
 >
 >- http://jquery.com/
 
@@ -73,6 +73,11 @@ var boxes = document.querySelectorAll('.box');
 
 **CDN사용**
 
+- **jquery.js** :  nomal 버전
+
+- **jquery.slim.js** :  Ajax, Effects, Deprecated 제외 (현재 사용되지 않는 코드를 지워준다)
+
+
 ```js
 <script src="http://code.jquery.com/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -103,11 +108,11 @@ window.jQuery || document.write ('<script src="./lib/jquery/jquery.min.js"><\/sc
 ```
 
 ###1.1 DOM Script VS jQuery 
-***DOM Script*** :  속도가 빠르다  
+- ***DOM Script*** :  속도가 빠르다  
 
-***jQuery*** : 속도가 DOM Script보다는 느리지만 사용이 간편하다
+- ***jQuery*** : 속도가 DOM Script보다는 느리지만 사용이 간편하다
 
-***Body안에 Script 선언*** : 가장 속도가 빠르다
+- ***Body안에 Script 선언*** : 가장 속도가 빠르다
 
 
 **- Case 0. Legacy DOM Script**
@@ -178,7 +183,7 @@ $('.gnb a').click(function (event) {
 })(this);
 ```
 
-**jQuery 팩토리 함수** (자바스크립트의 팩토리 패턴을 사용하기에 붙여진 이름)
+**- jQuery 팩토리 함수** (자바스크립트의 팩토리 패턴을 사용하기에 붙여진 이름)
 ```js
 // IIFE 패턴(즉시 실행 함수) 사용하지 않을 경우,
      // $ 기호는 자바스크립트 라이브러리들이 즐겨 사용하는 단축 변수명이기에
@@ -193,7 +198,7 @@ $('.gnb a').click(function (event) {
          console.log( $body, $body.jquery );
        }
 ```
- **Native DOM Events**
+ **- Native DOM Events**
 ```js
  // <head> 내부에서 jQuery 코드 수행 시, DOM Script와 마찬가지로
        // 문서객체모델이 완성된 이후에 코드가 실행되어야 하기에 이벤트를 사용해야 한다.
@@ -215,12 +220,12 @@ $('.gnb a').click(function (event) {
      // 참고 URL: http://d2.naver.com/helloworld/1009
      // sizzle() 라이브러리: 다양한 기능과 많은 CSS3 선택자 지원, 확장
      // 2. CSS 선택자를 사용한 경우, jQuery( 'css selector' )
-     console.time('Native DOM Control');
+     console.time('Native DOM Control'); //속도를 확인(시작부분)
        window.addEventListener('DOMContentLoaded', function() {
          document.querySelector('body').setAttribute('data-hasnt-child', 'no');
          document.querySelector('.gnb li:last-child').classList.add('last-native-dom');
        });
-     console.timeEnd('Native DOM Control');
+     console.timeEnd('Native DOM Control'); //속도를 확인(끝부분)
      // --------------------------------------------------------------------
      console.time('jQuery DOM Control');
        jQuery(document).ready(function() {
