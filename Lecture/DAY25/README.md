@@ -5,7 +5,7 @@
 ##1. Capturing & Bubbling
 - 예제
 
-~~~html
+~~~js
 var boxes = document.querySelectorAll('.box');
   var using_capture = !false; // capture or bubble
   var detectEventPropagation = function(ev) {
