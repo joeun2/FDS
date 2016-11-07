@@ -45,7 +45,7 @@ var boxes = document.querySelectorAll('.box');
 >
 >- http://jquery.com/
 
-
+###2.1 jQuery 설치
 **npm 설치**
 
 	npm run install-jquery
@@ -65,12 +65,13 @@ var boxes = document.querySelectorAll('.box');
 	npm run install-jquery  [실행]
 	npm run serve 			[실행]
 
+---
 **라이브러리 다운로드**
 
 ```js
 <script src="lib/jquery/jquery.js" ></script>
 ```
-
+---
 **CDN사용**
 
 - **jquery.js** :  nomal 버전
@@ -82,7 +83,7 @@ var boxes = document.querySelectorAll('.box');
 <script src="http://code.jquery.com/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 ```
-
+---
 **로컬데이터를 사용하기 위한 조건문**
 
 - 기본적으로 CDN데이터를 사용하되, 네트워크 불안정 또는 CDN이 폭파되었을 경우 사용 
@@ -106,23 +107,25 @@ window.jQuery || document.write ('<script src="./lib/jquery/jquery.min.js"><\/sc
 ```js
 !window.jQuery && document.write ('<script src="./lib/jquery/jquery.min.js"><\/script>');
 ```
+---
 **전달인자($) -> jQuery 확실한 명시 방법**
 
 - IIFE 패턴(즉시 실행 함수) 사용하지 않을 경우,  $ 기호는 자바스크립트 라이브러리들이 즐겨 사용하는 단축 변수명이기에 여러 라이브러리를 다중 사용할 경우 충돌이 발생할 수 있다. 전역에서 jQuery를 사용할 경우 여러분들은 충돌에 주의가 요구된다.
 
 ```js
 (function (global, $) {
+
 })(this, this.jQuery);
 ```
-     
-###1.1 DOM Script VS jQuery 
+---     
+###2.2 DOM Script VS jQuery 
 - ***DOM Script*** :  속도가 빠르다  
 
 - ***jQuery*** : 속도가 DOM Script보다는 느리지만 사용이 간편하다
 
 - ***Body안에 Script 선언*** : 가장 속도가 빠르다
 
-
+---
 **- Case 0. Legacy DOM Script**
 ```js
 // var gnb = document.getElementById('gnb');
@@ -190,7 +193,7 @@ $('.gnb a').click(function (event) {
 });
 })(this);
 ```
-
+---
 **1. 전달인자로 DOM ElementNode를 설정한 경우, jQuery( DOM ElementNode )** 
 
 ```js
@@ -223,6 +226,7 @@ jQuery(document).ready(init);
 
 - DOMContentLoaded Event << jQuery Ready Event << Load Event
 
+---
 **2. CSS 선택자를 사용한 경우, jQuery( 'css selector' )**
 
 - cssQuery() 라이브러리 : 자바스크립트 마술사, 딘 에드워드 (http://dean.edwards.name/my/cssQuery/)
@@ -245,6 +249,7 @@ jQuery(document).ready(init);
      console.timeEnd('jQuery DOM Control');
      console.log('%c------------------------------', 'color: #3d9a21');
 ```
+---
 **3. HTML 코드를 사용한 경우, jQuery('<html_code>')**
 ```js
      var $fds = jQuery('<div id="fds" class="jquery-study">Front-End Develop SCHOOL</div>');
@@ -261,6 +266,7 @@ jQuery(document).ready(init);
      // });
      console.log('%c------------------------------', 'color: #3d9a21');
 ```
+---
 **4. 전달인자로 함수를 전달 받은 경우, jQuery(function(){})**
 ```js
      //jQuery에 함수를 전달하면 암묵적으로 ready가 적용 된다
@@ -277,6 +283,7 @@ jQuery(document).ready(init);
      // jQuery.prototype의 속성을 사용하여 버전을 출력한다.
      console.log('jQuery().jquery:', jQuery().jquery);
 ```
+---
 **jQuery 코어 - 팩토리 함수**
 ```js
 // 함수 내부이기 때문에
