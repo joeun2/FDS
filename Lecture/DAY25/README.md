@@ -2,8 +2,8 @@
 
 # DAY 25
 
-##1. Capturing & Bubbling
-- 예제
+##1. Capture & Bubble
+- 이벤트 예제
 
 ```js
 var boxes = document.querySelectorAll('.box');
@@ -182,7 +182,7 @@ for ( var i=0, l=gnb_links.length; i<l; i++ ) {
    jQuery(link).on('click', assignParentClassActive);
  });
 ```
-**- Case 2.2 jQuery**
+**- Case 2.1 jQuery**(jQuery 함축해서 사용 (대부분 사용))
 ```js
 $('.gnb a').click(function (event) {
   e.preventDefault();
@@ -191,12 +191,9 @@ $('.gnb a').click(function (event) {
 })(this);
 ```
 
-**- jQuery 팩토리 함수** (자바스크립트의 팩토리 패턴을 사용하기에 붙여진 이름)
+**1. 전달인자로 DOM ElementNode를 설정한 경우, jQuery( DOM ElementNode )** 
 
-
-     js
 ```js
-       // 1. 전달인자로 DOM ElementNode를 설정한 경우, jQuery( DOM ElementNode )
        var $html = jQuery( document.documentElement );
        console.log( $html, $html.jquery );
        function init(event) {
@@ -206,27 +203,33 @@ $('.gnb a').click(function (event) {
        }
 ```
  **- Native DOM Events**
+
+- <head> 내부에서 jQuery 코드 수행 시, DOM Script와 마찬가지로 문서객체모델이 완성된 이후에 코드가 실행되어야 하기에 이벤트를 사용해야 한다.
+- 참고 URL 1 : https://developer.mozilla.org/ko/docs/Web/Events/DOMContentLoaded
+- 참고 URL 2 : https://developer.mozilla.org/ko/docs/Web/API/Document/readyState
+
 ```js
- // <head> 내부에서 jQuery 코드 수행 시, DOM Script와 마찬가지로
-       // 문서객체모델이 완성된 이후에 코드가 실행되어야 하기에 이벤트를 사용해야 한다.
        window.addEventListener('load', init);
        // IE 9+ 지원
        // DOMContentLoaded 이벤트가 load 이벤트 보다 빠르다!
-       // 참고 URL 1: https://developer.mozilla.org/ko/docs/Web/Events/DOMContentLoaded
-       // 참고 URL 2: https://developer.mozilla.org/ko/docs/Web/API/Document/readyState
        window.addEventListener('DOMContentLoaded', init);
-       ///////////////////////////
-       // jQuery Ready Function //
-       ///////////////////////////
-       jQuery(document).ready(init);
-       //////////////////
-       // Speed Result //
-       //////////////////
-       // DOMContentLoaded Event << jQuery Ready Event << Load Event
-     // cssQuery() 라이브러리: 자바스크립트 마술사, 딘 에드워드 (http://dean.edwards.name/my/cssQuery/)
-     // 참고 URL: http://d2.naver.com/helloworld/1009
-     // sizzle() 라이브러리: 다양한 기능과 많은 CSS3 선택자 지원, 확장
-     // 2. CSS 선택자를 사용한 경우, jQuery( 'css selector' )
+```
+ **- jQuery Ready Function**
+ 
+```js      
+jQuery(document).ready(init);
+```
+**- Speed Result**
+
+- DOMContentLoaded Event << jQuery Ready Event << Load Event
+
+**2. CSS 선택자를 사용한 경우, jQuery( 'css selector' )**
+
+- cssQuery() 라이브러리 : 자바스크립트 마술사, 딘 에드워드 (http://dean.edwards.name/my/cssQuery/)
+- 참고 URL : http://d2.naver.com/helloworld/1009
+- sizzle() 라이브러리 : 다양한 기능과 많은 CSS3 선택자 지원, 확장
+```js
+// 2. CSS 선택자를 사용한 경우, jQuery( 'css selector' )
      console.time('Native DOM Control'); //속도를 확인(시작부분)
        window.addEventListener('DOMContentLoaded', function() {
          document.querySelector('body').setAttribute('data-hasnt-child', 'no');
@@ -241,7 +244,9 @@ $('.gnb a').click(function (event) {
        });
      console.timeEnd('jQuery DOM Control');
      console.log('%c------------------------------', 'color: #3d9a21');
-     // 3. HTML 코드를 사용한 경우, jQuery('<html_code>')
+```
+**3. HTML 코드를 사용한 경우, jQuery('<html_code>')**
+```js
      var $fds = jQuery('<div id="fds" class="jquery-study">Front-End Develop SCHOOL</div>');
      // console.log( 'jQuery 인스턴스 객체 $fds:', $fds );
      jQuery(document).ready(function() {
@@ -255,7 +260,9 @@ $('.gnb a').click(function (event) {
      //   gnb.innerHTML = html_string + gnb.innerHTML;
      // });
      console.log('%c------------------------------', 'color: #3d9a21');
-     // 4. 전달인자로 함수를 전달 받은 경우, jQuery(function(){})
+```
+**4. 전달인자로 함수를 전달 받은 경우, jQuery(function(){})**
+```js
      //jQuery에 함수를 전달하면 암묵적으로 ready가 적용 된다
      jQuery(function(){
        jQuery('.gnb li:last-child a').html('전달 인자로 함수를 전달 받은 경우, <code>jQuery(function(){})</code>');
