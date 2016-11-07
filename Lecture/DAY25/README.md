@@ -5,7 +5,7 @@
 ##1. Capturing & Bubbling
 - 예제
 
-~~~js
+```js
 var boxes = document.querySelectorAll('.box');
   var using_capture = !false; // capture or bubble
   var detectEventPropagation = function(ev) {
@@ -38,7 +38,7 @@ var boxes = document.querySelectorAll('.box');
     box.addEventListener('click', detectEventPropagation, using_capture);
     box.addEventListener('click', anotherEventPropagation , using_capture);
   });
-~~~
+```
 
 ## 2. jQuery
 >손쉽고 간편한 JavaScript library
@@ -52,26 +52,31 @@ var boxes = document.querySelectorAll('.box');
 
 **json 설치**
 
-	npm init -y [json 파일생성]
+	[json 파일생성]
+	npm init -y 
 
+	[json scripts작성]
 	"scripts": {
 
 	"install-jquery": "npm install --save jquery",
 
-	"serve": "http-server -o -a localhost -p 9090" } [json 파일작성]
+	"serve": "http-server -o -a localhost -p 9090" } 
 	
 	npm run install-jquery  [실행]
 	npm run serve 			[실행]
 
 **라이브러리 다운로드**
 
-	<script src="lib/jquery/jquery.js" ></script>`
+```js
+<script src="lib/jquery/jquery.js" ></script>
+```
 
 **CDN사용**
 
-	<script src="http://code.jquery.com/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
+```js
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+```
 
 **로컬데이터를 사용하기 위한 조건문**
 
@@ -79,23 +84,32 @@ var boxes = document.querySelectorAll('.box');
 
 **- 방법 1**
 
-	if(!window.jQuery){
+```js
+if(!window.jQuery){
     	document.write ('<script src="./lib/jquery/jquery.min.js"><\/script>');
 	}
+```
 
 **- 방법 2**
 
-	window.jQuery || document.write ('<script src="./lib/jquery/jquery.min.js"><\/script>');
+```js
+window.jQuery || document.write ('<script src="./lib/jquery/jquery.min.js"><\/script>');
+```
 
 **- 방법 3**
 
-	!window.jQuery && document.write ('<script src="./lib/jquery/jquery.min.js"><\/script>');
+```js
+!window.jQuery && document.write ('<script src="./lib/jquery/jquery.min.js"><\/script>');
+```
 
 ###1.1 DOM Script VS jQuery 
+***DOM Script*** :  속도가 빠르다  
+***jQuery*** : 속도가 DOM Script보다는 느리지만 사용이 간편하다
+***Body안에 Script 선언***: 가장 속도가 빠르다
 
-~~~js
-///////////////////////////////
-// Case 0. Legacy DOM Script
+
+**- Case 0. Legacy DOM Script**
+```js
 // var gnb = document.getElementById('gnb');
 // id 속성을 사용한 위(↑)의 경우 VS
 // class 속성을 사용한 아래(↓)의 경우
@@ -126,238 +140,144 @@ for ( var i=0, l=gnb_links.length; i<l; i++ ) {
   var gnb_link = gnb_links.item(i);
   gnb_link.onclick = assignParentClassActive0;
 }
-////////////////////////
-// Case 1. Modern DOM Script
-// var gnb = document.querySelector('.gnb');
-// var gnb_links = gnb.querySelectorAll('a');
-// var assignParentClassActive = function(event) {
-//   event.preventDefault();
-//   event.target.parentNode.classList.add('active');
-// };
-// [].forEach.call(gnb_links, function(link) {
-//   link.addEventListener('click', assignParentClassActive);
-// });
-////////////////////
-// Case 2. jQuery
-// var $gnb = jQuery('.gnb');
-// var $gnb_links = jQuery('a', $gnb);
-// var $gnb_links = jQuery('.gnb a'); // <-- IE 9+ 성능 이슈 없음
-// var assignParentClassActive = function(event) {
-//   event.preventDefault();
-//   jQuery(event.target).parent().addClass('active');
-// };
-// jQuery.each($gnb_links, function(idx, link) {
-//   jQuery(link).on('click', assignParentClassActive);
-// });
-//Case 2.2 jQuery
+```
+**- Case 1. Modern DOM Script**
+```js
+ var gnb = document.querySelector('.gnb');
+ var gnb_links = gnb.querySelectorAll('a');
+ var assignParentClassActive = function(event) {
+   event.preventDefault();
+   event.target.parentNode.classList.add('active');
+ };
+ [].forEach.call(gnb_links, function(link) {
+   link.addEventListener('click', assignParentClassActive);
+ });
+```
+
+**- Case 2. jQuery**
+```js
+ var $gnb = jQuery('.gnb');
+ var $gnb_links = jQuery('a', $gnb);
+ var $gnb_links = jQuery('.gnb a'); // <-- IE 9+ 성능 이슈 없음
+ var assignParentClassActive = function(event) {
+   event.preventDefault();
+   jQuery(event.target).parent().addClass('active');
+ };
+ jQuery.each($gnb_links, function(idx, link) {
+   jQuery(link).on('click', assignParentClassActive);
+ });
+```
+**- Case 2.2 jQuery**
+```js
 $('.gnb a').click(function (event) {
   e.preventDefault();
   $(this).parent().addClass('active');
 });
-});//(this);
-~~~
+})(this);
+```
 
-
-
-
-
-
-
----
-###1.1 
- 
-
-
-
-
-####1.4.1 비교연산 (Comparison Operations) 
-크다(>), 작다(<), 크거나 같다(>=), 작거나 같다(<=), 같다(==), 다르다(!=) 등 비교 연산 결과를 제공합니다.
-
-~~~sass
-1 < 20        // true
-10 <= 20      // true
-4 < 1         // false
-4 >= 1        // true
-1 + 1 == 2    // true
-small != big // true
-~~~
-
-####1.4.2 문자연산 (String Operations)
-문자와 문자를 접합하려는 경우 + 연산자를 사용할 수 있습니다.
-
-~~~sass
-li {
-cursor: n + -resize; // n-resize
-}
-// " "를 붙이지 않아도 연산이 수행
-~~~
-
-####1.4.3 보간법(#{ }, Interpolation)
-SASS는 변수를 “ ” 내부에서 처리할 수 있는 보간법을 지원합니다.
-
-~~~sass
-$family: "Droid+Sans";
-@import url("http://fonts.googleapis.com/css?family=#{$family}");
-@mixin do($selector, $message) {
- body #{$selector}::before {
- content: $message;
- }
-//웹 폰트 CDN 사용시 보간법이 유용하게 활용
-~~~
-
-HTML에서 | 사용시 오류가 생기기 때문에 %7C로 바꿔줘야 함.
-
-~~~html
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre|Open+Sans|Roboto">
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre%7COpen+Sans%7CRoboto">
-~~~
-
-####1.4.4 쿼리문 보간법 활용(#{ }) 
-~~~sass
-$information-phone: "only screen and (max-width : 320px)";
-@media #{$information-phone} {
-background: red;
-}
-~~~
-
-###1.4.5 컬러 연산(Color Operations) 
-
-~~~sass
-p {
-color: #010203 * 2;
-/*  
-    01 * 2 = 02
-    02 * 2 = 04
-    03 * 2 = 06
-    ------------
-    #020406
-*/
-} 
-~~~
-
-####1.4.6 기타 연산(Etc. Operations) 
-불린 데이터 연산을 사용할 수 있습니다.
-
-	불린(Boolean) 연산 지원: and, or, not
-리스트(List) 연산 미지원.
-<br />배열 객체의 length, join 등 유사 함수 지원.
-
-- lenght($list) : 리스트의 길이를 돌려준다.
-- nth() : 리스트에서 순서에 해당한것을 가져온다.
-- join ($list1, $list2, [$separator]) : 합친다.
-- append($list1, $val) : 리스트 뒤에 집어넣는다. (push와 비슷)
-
----
-###1.5 믹스인 (@mixin)
-코드를 섞는다.
- 
-JS 함수와 흡사한 믹스인은 @mixin으로 모듈을 정의한 후, @include로 호출할 수 있어 재사용이 가능합니다.
-
-- @mixin : 믹스인을 정의.
-- @include : 믹스인을 호출.
-
-~~~sass
- @mixin box-sizing {
- 	-webkit-box-sizing: border-box;
- 		-moz-box-sizing: border-box;
-			 box-sizing: border-box; }
- #app {
- 	@include box-sizing; }
- #design {
-	 @include box-sizing; }
-~~~
-
-reset mixin 만들기.
-
-~~~sass
-@mixin reset-list {
-  margin: {
-    top: 0;
-    bottom: 0;
-  }
-  padding-left: 0;
-  list-style: none;
-}
-
-@mixin reset-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-@mixin reset-box-model {
-  outline: 0;
-  margin: 0;
-  border: 0;
-  padding: 0;
-}
-
-@mixin remove-img-bottom-space {
-  vertical-align: top;
-}
-~~~
-
-~~~sass
- . @mixin nested-reset {
- #{$html-elements} {
-     @include reset-box-model;
-     @include reset-font;
- } 
-
-$html-elements: "div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, acronym, address, big, cite,
-code, del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, b, u,
-i, center, dl, dt, dd, ol, ul, li, fieldset,
-form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output,
-ruby, section, summary, time, mark, audio,
-video" !default;
-~~~
-
-
-###1.5.1 전달 인자 (Arguments) 
-@mixin으로 정의된 모듈에 인자를 전달하여 믹스인을 확장할 수 있다.
-
-($변수) 믹스인 내부에 전달된 값을 받기에 전달 인자라고 부른다.
-~~~sass
-@mixin border-radius($변수) {
-    -webkit-border-radius: $변수;
-    -moz-border-radius: $변수;
-    border-radius: $변수;
-}
-
-@mixin box-sizing($origin) {
-  -webkit-box-sizing: $origin;
-  -moz-box-sizing: $origin;
-  -o-box-sizing: $origin;
-  -ms-box-sizing: $origin;
-  box-sizing: $origin;
-}
-
-@mixin transition($props: all 0.3s) {
-  -webkit-transition: $props;
-  -moz-transition: $props;
-  -o-transition: $props;
-  transition: $props;
-}
-~~~
-
----
-###1.6 가운데 정렬 박스 모듈
-~~~sass
-.center-box {
-  @include box-sizing(content-box)
-  position: absolute
-  top: 0
-  left: 0
-  width: $box-width
-  height: $box-height
-  margin:
-    left: $box-width / -2
-    top: $box-height / -2
-}
-~~~
+**jQuery 팩토리 함수** (자바스크립트의 팩토리 패턴을 사용하기에 붙여진 이름)
+```js
+// IIFE 패턴(즉시 실행 함수) 사용하지 않을 경우,
+     // $ 기호는 자바스크립트 라이브러리들이 즐겨 사용하는 단축 변수명이기에
+     // 여러 라이브러리를 다중 사용할 경우 충돌이 발생할 수 있다.
+     // 전역에서 jQuery를 사용할 경우 여러분들은 충돌에 주의가 요구된다.
+       // 1. 전달인자로 DOM ElementNode를 설정한 경우, jQuery( DOM ElementNode )
+       var $html = jQuery( document.documentElement );
+       console.log( $html, $html.jquery );
+       function init(event) {
+         console.log(event.type);
+         var $body = jQuery( document.body );
+         console.log( $body, $body.jquery );
+       }
+```
+ **Native DOM Events**
+```js
+ // <head> 내부에서 jQuery 코드 수행 시, DOM Script와 마찬가지로
+       // 문서객체모델이 완성된 이후에 코드가 실행되어야 하기에 이벤트를 사용해야 한다.
+       window.addEventListener('load', init);
+       // IE 9+ 지원
+       // DOMContentLoaded 이벤트가 load 이벤트 보다 빠르다!
+       // 참고 URL 1: https://developer.mozilla.org/ko/docs/Web/Events/DOMContentLoaded
+       // 참고 URL 2: https://developer.mozilla.org/ko/docs/Web/API/Document/readyState
+       window.addEventListener('DOMContentLoaded', init);
+       ///////////////////////////
+       // jQuery Ready Function //
+       ///////////////////////////
+       jQuery(document).ready(init);
+       //////////////////
+       // Speed Result //
+       //////////////////
+       // DOMContentLoaded Event << jQuery Ready Event << Load Event
+     // cssQuery() 라이브러리: 자바스크립트 마술사, 딘 에드워드 (http://dean.edwards.name/my/cssQuery/)
+     // 참고 URL: http://d2.naver.com/helloworld/1009
+     // sizzle() 라이브러리: 다양한 기능과 많은 CSS3 선택자 지원, 확장
+     // 2. CSS 선택자를 사용한 경우, jQuery( 'css selector' )
+     console.time('Native DOM Control');
+       window.addEventListener('DOMContentLoaded', function() {
+         document.querySelector('body').setAttribute('data-hasnt-child', 'no');
+         document.querySelector('.gnb li:last-child').classList.add('last-native-dom');
+       });
+     console.timeEnd('Native DOM Control');
+     // --------------------------------------------------------------------
+     console.time('jQuery DOM Control');
+       jQuery(document).ready(function() {
+         jQuery('body').attr('data-is-body', 'yes');
+         jQuery('.gnb li:last-child').addClass('last-jquery');
+       });
+     console.timeEnd('jQuery DOM Control');
+     console.log('%c------------------------------', 'color: #3d9a21');
+     // 3. HTML 코드를 사용한 경우, jQuery('<html_code>')
+     var $fds = jQuery('<div id="fds" class="jquery-study">Front-End Develop SCHOOL</div>');
+     // console.log( 'jQuery 인스턴스 객체 $fds:', $fds );
+     jQuery(document).ready(function() {
+       // .gnb 요소의 첫번째 자식 요소로 $fds에 참조된 jQuery {} 객체의 HTML 코드로 생성된 요소를 삽입하라.
+       $fds.prependTo('.gnb');
+     });
+     // 위 코드를 Native Code 로 변경
+     // window.addEventListener('DOMContentLoaded', function() {
+     //   var html_string = '<div id="fds" class="jquery-study">Front-End Develop SCHOOL</div>';
+     //   var gnb = document.querySelector('.gnb');
+     //   gnb.innerHTML = html_string + gnb.innerHTML;
+     // });
+     console.log('%c------------------------------', 'color: #3d9a21');
+     // 4. 전달인자로 함수를 전달 받은 경우, jQuery(function(){})
+     //jQuery에 함수를 전달하면 암묵적으로 ready가 적용 된다
+     jQuery(function(){
+       jQuery('.gnb li:last-child a').html('전달 인자로 함수를 전달 받은 경우, <code>jQuery(function(){})</code>');
+     });
+     // jQuery() 팩토리 함수가 하는 일은 내부적으로 객체지향 자바스크립트 패턴(constrcutor, prototype)으로
+     // jQuery {} 인스턴스 객체를 생성한다. ※ 다시 말해 가급적 팩토리 함수를 사용하는 빈도를 줄여야 한다.
+     console.log( 'jQuery().constructor === jQuery:', jQuery().constructor === jQuery );
+     // 현재 페이지 또는 애플리케이션에서 사용 중인 jQuery의 버전을 체크하는 방법
+     console.log('jQuery.fn.jquery:', jQuery.fn.jquery);
+     console.log('jQuery.prototype.jquery:', jQuery.prototype.jquery);
+     // jQuery() 팩토리 함수의 결과 값은 jQuery {} 인스턴스 객체이기에
+     // jQuery.prototype의 속성을 사용하여 버전을 출력한다.
+     console.log('jQuery().jquery:', jQuery().jquery);
+```
+**jQuery 코어 - 팩토리 함수**
+```js
+// 함수 내부이기 때문에
+    // 안정적으로 $를 jQuery로 사용할 수 있다.
+    jQuery(function($){
+      var changeColor = function(e) {
+        // 브라우저 기본 동작 차단
+        e.preventDefault();
+        // jQuery 메소드 내부에 전달되는 함수 내부의 this는
+        // jQuery 객체가 아닌 벗겨진 DOM 객체를 가리킨다.
+        var $span = $('span', this).css('color', '#fe4940');
+      };
+      var chageSpanTextUpper = function(e) {
+        // 기존의 텍스트 설정 값을 가져와 대문자로 변환한 후
+        // 변수에 변환된 텍스트 값을 복사
+        var $span = $('span', this);
+        var span_changed_text = $span.text().toUpperCase();
+        // 복사된 값의 변수를 다시 $span jQuery {}의 메소드 .text()를 사용해
+        // 내용 값을 변경
+        $span.text(span_changed_text);
+      };
+      $('a.foo').click(changeColor);
+      $('a.foo').click(chageSpanTextUpper);
+    });
+```
