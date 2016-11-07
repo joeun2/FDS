@@ -104,6 +104,7 @@ window.jQuery || document.write ('<script src="./lib/jquery/jquery.min.js"><\/sc
 
 ###1.1 DOM Script VS jQuery 
 ***DOM Script*** :  속도가 빠르다  
+
 ***jQuery*** : 속도가 DOM Script보다는 느리지만 사용이 간편하다
 
 ***Body안에 Script 선언*** : 가장 속도가 빠르다
