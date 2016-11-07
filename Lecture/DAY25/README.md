@@ -125,7 +125,7 @@ window.jQuery || document.write ('<script src="./lib/jquery/jquery.min.js"><\/sc
 
 - ***Body안에 Script 선언*** : 가장 속도가 빠르다
 
----
+
 **- Case 0. Legacy DOM Script**
 ```js
 // var gnb = document.getElementById('gnb');
