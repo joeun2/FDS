@@ -223,7 +223,7 @@ $('.gnb a').click(function (event) {
  **- jQuery Ready Function**
  
 ```js      
-jQuery(document).ready(init);
+       jQuery(document).ready(init);
 ```
 **- Speed Result**
 
@@ -236,7 +236,6 @@ jQuery(document).ready(init);
 - 참고 URL : http://d2.naver.com/helloworld/1009
 - sizzle() 라이브러리 : 다양한 기능과 많은 CSS3 선택자 지원, 확장
 ```js
-// 2. CSS 선택자를 사용한 경우, jQuery( 'css selector' )
      console.time('Native DOM Control'); //속도를 확인(시작부분)
        window.addEventListener('DOMContentLoaded', function() {
          document.querySelector('body').setAttribute('data-hasnt-child', 'no');
