@@ -45,7 +45,7 @@ var boxes = document.querySelectorAll('.box');
 >
 >- http://jquery.com/
 
-###2.1 jQuery 설치
+---
 **npm 설치**
 
 	npm run install-jquery
@@ -118,7 +118,7 @@ window.jQuery || document.write ('<script src="./lib/jquery/jquery.min.js"><\/sc
 })(this, this.jQuery);
 ```
 ---     
-###2.2 DOM Script VS jQuery 
+###2.1 DOM Script VS jQuery 
 - ***DOM Script*** :  속도가 빠르다  
 
 - ***jQuery*** : 속도가 DOM Script보다는 느리지만 사용이 간편하다
