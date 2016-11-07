@@ -69,8 +69,10 @@ var boxes = document.querySelectorAll('.box');
 
 **CDN사용**
 
+	`js
 	<script src="http://code.jquery.com/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	`
 
 **로컬데이터를 사용하기 위한 조건문**
 
