@@ -1,0 +1,9 @@
+{
+  "name": "folio-news-twitter-section",
+  "version": "1.0.0",
+  "description": "Aqua",
+  "scripts": {
+    "sass": "node-sass -w sass -o css --output-style expanded"
+  },
+  "author": "JiEun"
+}

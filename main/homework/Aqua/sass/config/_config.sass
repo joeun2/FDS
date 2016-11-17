@@ -1,0 +1,43 @@
+//
+// * ----------------------------------------------------
+// * 모듈 로드
+// * ----------------------------------------------------
+
+@import helper
+@import colors
+@import fonts
+
+// ----------------------------------------------------
+
+// <html> 글자 크기
+$root-font-size: 18px
+
+// ----------------------------------------------------
+
+// 래퍼(.wrapper ) 너비
+$root-width: 1170px
+
+// ----------------------------------------------------
+
+// 가운데 정렬
+@mixin widthCenter
+  width: $root-width
+  margin: 0 auto
+
+// ----------------------------------------------------
+
+// 순서목록 Before
+@mixin listBefore
+  +font(size 18px weight 600 line-height 30px)
+  width: 40px
+  height: 40px
+  border-radius: 50px
+  border: 1px solid #ddd
+  display: inline-block
+  text-indent: 15px
+  line-height: 38px
+  color: $aqua-fg2
+  +margin(right 10px)
+  float: left
+  position: relative
+  top: -7px
