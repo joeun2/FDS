@@ -4,13 +4,13 @@
 function aniScroll(){
   var scrollY = $( global ).scrollTop();
   var wheight = $( global ).height();
-  // console.log(scrollY);
+  console.log(scrollY);
   // console.log(wheight);
 
-for (var i = scrollY, l = 500; i < l; i++) {
-  //console.log(i);
+// for (var i = scrollY, l = 500; i < l; i++) {
+//   console.log(i);
 
-  if (i += 500){
+  if (true){
     $( "#ani-01" ).animate({
       right: "-272px",
       opacity: "1"
@@ -38,7 +38,7 @@ for (var i = scrollY, l = 500; i < l; i++) {
   //     right: "-172px"
   //   }, 600 );
   // });
-}
+// }
 }
 
   aniScroll();
