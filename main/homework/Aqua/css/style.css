@@ -509,6 +509,7 @@ main .container .p-01 .p-01-t-01 {
   line-height: 2.22222rem;
   margin-bottom: 20px;
   width: 360px;
+  opacity: 0;
 }
 
 main .container .p-01 .p-01-t-02 {
@@ -518,12 +519,14 @@ main .container .p-01 .p-01-t-02 {
   line-height: 28px;
   line-height: 1.55556rem;
   width: 340px;
+  opacity: 0;
 }
 
 main .container .p-01 img {
   position: absolute;
   top: 120px;
-  right: -272px;
+  right: -472px;
+  opacity: 0;
 }
 
 main .container .p-02 {
