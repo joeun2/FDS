@@ -1,7 +1,24 @@
 ###### Front-End Develop SCHOOL
 
 # DAY 12
- 
+
+### 접근성
+
+- WCAG 2.x
+  1. 인식의 용이성
+  1. 운용의 용이성
+  1. 이해의 용이성
+  1. 견고성
+- WAI-ARIA 1.x
+
+[수업자료 키노트](https://drive.google.com/file/d/0B_nI53HQaYcNa1NyTWxrcjBSSG8/view?usp=sharing)
+
+### 플렉시블 박스 Flexbox: CSS Layout Module
+
+- 키노트(Keynote)
+- 데몬스트레이션(Demonstration)
+
+---
 
 ## 접근성
 - 접근성은 유니버셜 디자인  > 소수가 아닌 다수, 기계도 이해하기 위함이다.
@@ -63,25 +80,25 @@
 
     - 자막/원고/수화 제공
     - 플레이어 콘트롤러 제공
-    - 다양한 언어, 화질, 플랫폼별 고려하여 제공 
- 
+    - 다양한 언어, 화질, 플랫폼별 고려하여 제공
+
 > 열린 자막<br>
 > : 영상 자체에 자막이 입혀진 것<br>
 > 닫힌 자막<br>
 > : 소리정보까지 제공. 사용자가 자막을 on/off 할 수 기능을 제공한 자막
- 
+
 
 #### 2.1.3 명료성
 
     - 색으로만 구분되는 콘텐츠 주의 ( 모양의 구분 제공 )
-    - 명확하게 인식 가능한 지시 사항 제공   
+    - 명확하게 인식 가능한 지시 사항 제공
     - 텍스트/배경 콘텐츠 명도 대비 준수
     - 고대비 모드 제공 , 브라우저에서 이미지는 반전되지 않으므로 사용상 주의
     - 캡차는 시각 장애인이 인식하기 어려우므로 음성듣기 기능을 제공
     - 자동재생 배경음악 사용 주의 > 바로 멈춤기능 제공
 
 > 4.5:1 을 꼭 지켜야하나?<br>
-> : 24(18pt) 이상, 굵은 18px(14pt) 환경에선 명도 대비 3:1 
+> : 24(18pt) 이상, 굵은 18px(14pt) 환경에선 명도 대비 3:1
 
 <br>
 
@@ -91,33 +108,78 @@
 
     - 키보드로 내비게이션을 운용할 수 없다
     - 탭, 엔터, 스페이스 키만으로 운용
-    - 마우스가 올라왔을때 focus가 와야하며, 시각적으로 표시 해주어야 한다.
+    - 마우스가 올라왔을때 focus가 와야하며 툴팁과 같은 시각적 표시가 있어야 한다.
     - focus를 못받는 요소에는 onclick 이벤트를 주지 않아야 한다.
     - 방향키, 스페이스, page up/down 등의 키보드 탐색을 지원해야 한다.
 
 * tabindex 속성값을 주면 `<div>`, `<span>` 요소와 같이 포커스를 못받는 요소에게 포커스를 줄 수 있다.
 
+#### 요소에 마우스 오버, 포커싱 시 툴팁 띄우기 예시
+```html
+<style>
+    .tooltip{
+      position: relative;
+      padding: 1em;
+    }
+    .tooltip:hover .tooltip-content,
+    .tooltip:focus .tooltip-content
+    {
+      display: block;
+    }
+    .tooltip-content{
+      display: none;
+      position: absolute;
+      top: 20px;
+      left: 60px;
+      width: 140px;
+      padding: 0.5em 1em;
+      border: 1px solid;
+    }
+  </style>
+</head>
+<body>
+  <div class="tooltip" role="tooltip" tabindex="0">
+    구독게시판 
+    <span class="tooltip-content">즐겨찾기 게시판의 소식을 네이버 ME에서 모아보세요!</span>
+  </div>
+
+  <script>
+    var tooltip = document.querySelector(".tooltip");
+    tooltip.onkeydown = function(event){
+      // esc 키를 누르면 툴팁 제거
+      if(event.keyCode === 27){ 
+        tooltip.querySelector(".tooltip-content").style.display = "none";
+      }
+    }
+    tooltip.onblur = function(event){
+      tooltip.querySelector(".tooltip-content").removeAttribute("style");
+    }
+  </script>
+</body>
+
+```
+
 > 404페이지
 > - 홈링크 제공
-> - 사용자가 의도한 페이지정보, 검색, 페이지 이탈 기능 등을 제공해야 한다. 
+> - 사용자가 의도한 페이지정보, 검색, 페이지 이탈 기능 등을 제공해야 한다.
 
 #### 2.2.2 충분한 시간 제공
 
 #### 2.2.3 광 과민성 발작 예방
 
-#### 2.2.4 쉬운 내비게이션 
+#### 2.2.4 쉬운 내비게이션
 
 ---
 
 # HTML & CSS
 
-## Flexbox 
+## Flexbox
 
     - Block 레이아웃 : 문서 배치
     - Inline 레이아웃 : 텍스트 배치
-    - Table 레이아웃 : 표 배치 
+    - Table 레이아웃 : 표 배치
     - Positioning 레이아웃 : 격리된 배치
-    - Flex 레이아웃 : 유연한 배치, 모바일에 유리 
+    - Flex 레이아웃 : 유연한 배치, 모바일에 유리
     - Grid 레이아웃 : 큰 화면에 적합. 현재는 지원 브라우저가 거의 없다.
 
 ![flex-direction-terms](https://www.w3.org/TR/2014/WD-css-flexbox-1-20140925/images/flex-direction-terms.svg)
@@ -129,18 +191,31 @@
 * main axis : item 이 정렬되는 주축
 * cross axis : 주축에 교차가 되는 축
 
+#### # 컨테이너와 관련된 속성들
+
+ - display : flex		      —> block 처럼 동작
+ - display : inline-flex	—> inline 처럼 동작
+ - justify-content 		    —> 주축( main-axis )의 방향으로 컨텐츠를 정렬
+ - flex-direction		      —> 주축의 방향을 설정 (row, row-reverse, column, column-reverse) 		
+ - flex-wrap			        —> 자식을 감싸는 방식(nowrap, wrap, wrap-reverse(자식이 떨어지는 순서 방향을 반대로))
+
+#### # 컨텐츠와 관련된 속성들
+
+ - align-items 		—> 자식들의 정렬 (start, end, center)
+ - align-content  —> 자식들을 통합적으로 관리
+ - order          —> 자식들의 순서를 변경. 마크업 자체의 구조가 바뀌는 것이 아니기 때문에 웹 접근성 준수에도 좋습니다.
+ - flex-basis     —> 주축의 방향이 row일 경우 자식 컨텐츠의 넓이를, 주축의 방향이 column 일 경우 자식 컨텐츠의 높이를 조절하게 됩니다. width 속성과 비슷합니다.
+ - align-self     —> 개별 자식의 align을 조절하여 따로 따로 움직일 수록 할 수 있습니다.
+
 #### # Shorthand
 ```
 flex-flow : <flex-direction> <flex-wrap>;
-flex: <grow> <shrink> <basis>;
+flex: initial === flex: 0(flex-grow) 1(flex-shrink) auto(flex-basis);
 ```
 
-#### # Display Order
-- order는 기본값이 0, 같은 값이면 마크업 순서대로
-- 마크업 순서에 구애받지 않고 배치할 수 있기 때문에 접근성을 향상 시킬 수 있다.
 <br><br>
 
-`참고)` 
+`참고)`
 
 - [A Visual Guide to CSS3 Flexbox Properties](https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties)
 - [Flexbox playground](https://codepen.io/enxaneta/full/adLPwv/)

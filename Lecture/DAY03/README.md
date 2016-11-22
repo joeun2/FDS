@@ -110,7 +110,7 @@ var link_2 = links[1];
 `[cite="http:wiki.com/quot"]{}` : 사이트 값이 http:wiki.com/quot 가진 것을 찾는다.<br>
 `p [class="note"] = p.note`<br>
 
-`data` : date-app : date를 앞에 다가 넣으면 새로운 속성을 정의 할 수 있다.<br>
+`data` : data-app : data를 앞에 다가 넣으면 새로운 속성을 정의 할 수 있다.<br>
 `|` : '-'(하이픈)을 의미한다.<br>
 
 
@@ -160,10 +160,10 @@ var link_2 = links[1];
 
 ※ 하위 브라우저가 가상 클래스가 작동이 안되니 클래스를 부여하는게 좋다.<br>
 
-#### `<q>`, `<bq>`, `<cite>`
+#### `<q>`, `<blockquote>`, `<cite>`
 
 `<q>`  : `quote`의 약자로 인용구가 짧을때 인라인 요소로 사용된다.<br>
-`<bq>` : `blockquote`의 약자로 인용구가 많을때 사용한다.<br>
+`<blockquote>` : 인용구가 많을때 사용한다.<br>
 
 `<cite>` :<br>
 1) 요소로써의 `cite`는 인용에 사용된 글을 이야기 한 사람 citation을 의미한다.<br>
@@ -207,3 +207,13 @@ var link_2 = links[1];
 
 svg 파일 내부에 클래스 path, rect에 공통 클래스를 준다.<br>
 스타일 클래스 내부에 부여된 클래스에 fill 요소의 컬러를 적용하면 된다.
+
+-
+
+### 웹 프론트엔드는 아주 쉽습니다...
+
+위 문구에 :fire:**열폭**:fire:한 **프론트엔드 현업 종사자/관계자들**. :rage1: :goberserk: :rage2: :rage3: :finnadie: :goberserk: :godmode: :feelsgood:<br>
+주먹:facepunch:을 부르는 문구였던 겁니다! **필살기 연타!!** :arrow_left: :arrow_lower_left: :arrow_down: :arrow_lower_right: :arrow_right: :heavy_plus_sign: :parking: :repeat:
+
+<img src="../Assets/D3-front-end-easy-false.jpg" alt="" width="555" height="2691.75">
+<img src="../Assets/D3-daguri.jpg" alt="다구리" width="555" height="363.128571429">
